@@ -4,7 +4,14 @@ Project for Webengineering classes
 
 <h2><b>DEADLINE: 11 June 2018</b></h2>
 
-Requirements:
+<h3>Requirements:</h3>
+
+Must Have:
+
+Should Have:
+
+Nice To Have:
+
 
 Pages:
 - Log in
@@ -28,16 +35,37 @@ Functions:
 -  End Time
 - Total Time
 - Difference
+-  Previous Projects
+- Recent Projects
+    - A
+    - B
+    - C
+
+-my Team
+    - Team organisation
+    - Team tasks
+    - Time control
+    - Contracts
+    
+    
+- Upload function
+    - Team Upload (workspace)
+
+- Todo List
+    - How much time spent on each todo item
+    
 
     
     
     
-ToDo:
+<h3>ToDo:</h3>
 
 - Mockup
 - Use Cases
 - Wireframe
 
 
-Dependencies:
+<h3>Dependencies:</h3>
+
+
 
