@@ -14,9 +14,12 @@ Nice To Have:
 
 
 Pages:
-- Log in
-- History
-- Todo
+    - Landing page
+    - Dashboard
+    - Projects
+    - Team Overview
+    - Analytics
+    - Admin page
 
 Users:
 - Administrator
@@ -24,7 +27,7 @@ Users:
 
 Functions:
 - log in
-- data visualisation
+- data visualisation (adimin)
 - save data
 - time
 -reporting
@@ -53,16 +56,24 @@ Functions:
 
 - Todo List
     - How much time spent on each todo item
-    
-
-    
-    
+      
     
 <h3>ToDo:</h3>
 
 - Mockup
 - Use Cases
+    - Landing page (Toby)
+    - Dashboard (Fabian)
+    - Projects (Roger)
+    - Team Overview (Toby)
+    - Analytics (Fabian)
+    - Admin page (Roger)
+    
+- Database
+    - ERD - 
+
 - Wireframe
+
 
 
 <h3>Dependencies:</h3>
