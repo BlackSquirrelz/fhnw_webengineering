@@ -6,77 +6,80 @@ Project for Webengineering classes
 
 <h3>Requirements:</h3>
 
-Must Have:
+<h4>Backlog</h4>
+- reporting
+- Database
+- Database Diagram
+- Registration Function
+- Difference
 
-Should Have:
+<h2>Timeline:</h2>
 
-Nice To Have:
+<h3>19/03/2018 - Requirements</h3>
 
-
-Pages:
-    - Landing page
-    - Dashboard
-    - Projects
-    - Team Overview
-    - Analytics
-    - Admin page
+<h4>Must Have:</h4>
 
 Users:
 - Administrator
 - General User
 
+Pages:
+
+- Login
+- Dashboard / Projects / Overall Analytics
+- Individual Project and Analytics
+- Team Overview
+- Admin page
+
 Functions:
+- registration
 - log in
 - data visualisation (adimin)
 - save data
 - time
--reporting
--  Database
--  Database Diagram
-- Registration Function
-- Start Time
--  End Time
-- Total Time
-- Difference
--  Previous Projects
+    - Start Time
+    - End Time
+    - Total Time
+    - Difference
+- Todo List
+    - How much time spent on each todo item
+    
+-my Team
+    - Team organisation
+    - Team tasks
+    - Time control
+
+
+<h4>Should Have:</h4>
+
+- Upload function
+    - Team Upload (workspace)
+    
+- Previous Projects
 - Recent Projects
     - A
     - B
     - C
 
--my Team
-    - Team organisation
-    - Team tasks
-    - Time control
-    - Contracts
-    
-    
-- Upload function
-    - Team Upload (workspace)
+<h4>Nice To Have:</h4>
 
-- Todo List
-    - How much time spent on each todo item
-      
-    
-<h3>ToDo:</h3>
+   - Contracts
 
-- Mockup
+
+<h3>26/03/2018 - Use Cases</h3>
+
 - Use Cases
     - Landing page (Toby)
+    
     - Dashboard (Fabian)
     - Projects (Roger)
     - Team Overview (Toby)
     - Analytics (Fabian)
     - Admin page (Roger)
-    
-- Database
-    - ERD - 
 
-- Wireframe
+<h3>02/04/2018 -  Database setup and EDR</h3>
 
 
-
-<h3>Dependencies:</h3>
 
 
 
