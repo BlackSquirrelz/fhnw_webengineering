@@ -1,6 +1,6 @@
-# fhnw_webengineering
+# timecatcher
 
-Project for Webengineering classes
+Project for Webengineering course @FHNW
 
 <h2><b>DEADLINE: 11 June 2018</b></h2>
 
@@ -70,7 +70,6 @@ Functions:
 
 - Use Cases
     - Landing page (Toby)
-    
     - Dashboard (Fabian)
     - Projects (Roger)
     - Team Overview (Toby)
