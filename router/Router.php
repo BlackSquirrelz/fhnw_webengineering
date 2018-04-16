@@ -1,12 +1,17 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: blacksquirrelz
- * Date: 4/1/18
- * Time: 12:01
+ * User: andreas.martin
+ * Date: 22.09.2017
+ * Time: 10:42
  */
 
 namespace router;
+
+use http\Exception;
+use http\HTTPException;
+use http\HTTPStatusCode;
+use http\HTTPHeader;
 
 class Router
 {
@@ -25,28 +30,45 @@ class Router
     }
 
     public static function route($method, $path, $routeFunction) {
-        self::route_auth($method, $path, null,$routeFunction);
+        self::route_auth($method, $path, null, $routeFunction);
     }
 
-    public static function route_auth($method,$path,$authFunction, $routeFunction) {
+    public static function route_auth($method, $path, $authFunction, $routeFunction) {
         if(empty(self::$routes))
             self::init();
-        $path = trim($path,'/');
+        $path = trim($path, '/');
+        preg_match_all("/{(.*?)}/", $path, $matches);
+        foreach($matches[1] as $match_key => $match_value){
+            $match_pos = strpos($path, $match_value);
+            if($match_pos)
+            {
+                $path = substr_replace($path,"{parameter" . $match_key . "}",$match_pos-1, strlen($match_value)+2);
+            }
+        }
         self::$routes[$method][$path] = array("authFunction" => $authFunction, "routeFunction" => $routeFunction);
     }
 
-    public static function call_route($method, $path, $errorFunction) {
-        $path =  trim(parse_url($path,PHP_URL_PATH),'/');
+    public static function call_route($method, $path) {
+        $path = trim(parse_url($path, PHP_URL_PATH), '/');
+        $path_pieces = explode('/', $path);
+        $parameters = [];
+        $parameter_number = 0;
+        foreach($path_pieces as $path_value) {
+            if(is_numeric($path_value)) {
+                $parameters[$parameter_number] = $path_value;
+                $path = str_replace("/".$path_value,"/"."{parameter" . $parameter_number++ . "}",$path);
+            }
+        }
         if(!array_key_exists($method, self::$routes) || !array_key_exists($path, self::$routes[$method])) {
-            $errorFunction(); return;
+            throw new HTTPException(HTTPStatusCode::HTTP_404_NOT_FOUND);
         }
         $route = self::$routes[$method][$path];
         if(isset($route["authFunction"])) {
-            if(!$route["authFunction"]()) {
+            if (!$route["authFunction"]()) {
                 return;
             }
         }
-        $route["routeFunction"];
+        $route["routeFunction"](...$parameters);
     }
 
     public static function errorHeader() {
