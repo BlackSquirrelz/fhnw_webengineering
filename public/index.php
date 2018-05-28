@@ -29,9 +29,9 @@ $authFunction = function () {
     return false;
 };
 
-var_dump(Router::route("GET", "/login", function () {
-    AgentController::loginView();
-}));
+//var_dump(Router::route("GET", "/login", function () {
+//    AgentController::loginView();
+//}));
 
 Router::route("GET", "/register", function () {
     AgentController::registerView();
