@@ -24,7 +24,7 @@
 <body>
 <div class="container" style="display:flex;flex-direction:column;justify-content:center;">
     <div class="page-header">
-        <h2 class="text-center"><strong>WE-CRM</strong></h2></div>
+        <h2 class="text-center"><strong>TimeCatcher</strong></h2></div>
     <form action="<?php echo $GLOBALS["ROOT_URL"]; ?>/login" method="post">
         <div class="form-group">
             <input class="form-control" type="email" name="email" placeholder="Email">
