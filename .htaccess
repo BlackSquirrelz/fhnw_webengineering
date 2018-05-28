@@ -2,14 +2,14 @@
 RewriteEngine On
 
 # this ensures that HTTPS is used except on localhost
-#RewriteCond %{HTTP_HOST} !=localhost
-#RewriteCond %{HTTPS} off
-#RewriteCond %{HTTP:X-Forwarded-Proto} !https
-#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [QSA,L,R=301]
+RewriteCond %{HTTP_HOST} !=localhost
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [QSA,L,R=301]
 
 # this sends the authorization header to a PHP envirnoment variable
-#RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
 # this redirects everything except asset requests to the index.php file
-#RewriteRule ^(?!.*assets/)(.*) index.php [QSA,L,E=ORIGINAL_PATH:/$1]
-#RewriteRule assets/(.*) view/assets/$1 [QSA,L]
+RewriteRule ^(?!.*assets/)(.*) index.php [QSA,L,E=ORIGINAL_PATH:/$1]
+RewriteRule assets/(.*) view/assets/$1 [QSA,L]

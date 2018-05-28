@@ -5,7 +5,7 @@
  * Date: 12.09.2017
  * Time: 21:30
  */
-require_once("../config/Autoloader.php");
+require_once("config/Autoloader.php");
 
 use router\Router;
 use controller\CustomerController;
@@ -20,7 +20,7 @@ use http\HTTPException;
 use http\HTTPHeader;
 use http\HTTPStatusCode;
 
-//session_start();
+session_start();
 
 $authFunction = function () {
     if (AuthController::authenticate())
@@ -31,7 +31,7 @@ $authFunction = function () {
 
 Router::route("GET", "/login", function () {
     AgentController::loginView();
-}));
+});
 
 Router::route("GET", "/register", function () {
     AgentController::registerView();
