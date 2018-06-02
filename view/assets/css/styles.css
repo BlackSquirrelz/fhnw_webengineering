@@ -1,10 +1,168 @@
-.btn-group {
-  white-space:nowrap;
+body {
+  margin:0;
+  font-family:"Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size:0.875rem;
+  font-weight:400;
+  line-height:1.5;
+  color:#919aa1;
+  text-align:left;
 }
 
-.btn-group > .btn {
-  float:none;
-  display:inline-block;
-  margin-right:-2px;
+#base-div {
+  background:url(../../assets/img/Background-2.jpg);
+}
+
+#home-div {
+  background-color:white;
+}
+
+#navbar {
+  background-color:grey;
+  background-color:rgba(225, 225, 225, 0.9);
+}
+
+.logo {
+  max-height:30px;
+  max-width:30px;
+  margin-top:-10px;
+}
+
+#features-block {
+  text-align:center;
+  background-color:grey;
+  background-color:rgba(225, 225, 225, 0.9);
+  margin:100px 200px 20px 200px;
+  padding:40px;
+}
+
+#features-heading {
+  margin-bottom:60px;
+}
+
+#pricing-block {
+  text-align:center;
+  background-color:grey;
+  background-color:rgba(225, 225, 225, 0.9);
+  margin:100px 200px 20px 200px;
+  padding:40px;
+}
+
+#pricing-heading {
+  margin-bottom:60px;
+}
+
+#login-div {
+  position:relative;
+}
+
+#login-form {
+  text-align:center;
+  background-color:grey;
+  background-color:rgba(225, 225, 225, 0.9);
+  padding:30px;
+  margin-top:100px;
+  max-width:400px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%);
+  width:90%;
+}
+
+#login-form h1, h2, h3, h4, h5, h6 {
+  margin-bottom:30px;
+}
+
+#login-form .form-control {
+  margin:30px 0px 30px 0px;
+}
+
+#login-form .btn:not(:disabled):not(.disabled) {
+  margin-top:30px;
+}
+
+#signup-div {
+  position:relative;
+}
+
+#signup-form {
+  text-align:center;
+  background-color:grey;
+  background-color:rgba(225, 225, 225, 0.9);
+  padding:30px;
+  margin-top:100px;
+  margin-bottom:40px;
+  max-width:400px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%);
+  width:90%;
+}
+
+#signup-form h1, h2, h3, h4, h5, h6 {
+  margin-bottom:30px;
+}
+
+#signup-form .form-control {
+  margin:30px 0px 30px 0px;
+}
+
+#signup-form .btn:not(:disabled):not(.disabled) {
+  margin-top:30px;
+}
+
+#home-block {
+  margin:0px 20px 40px 20px;
+}
+
+#home-block .homeblock-heading {
+  text-align:center;
+  margin-top:40px;
+}
+
+.post-heading {
+  margin-bottom:10px;
+}
+
+.post-small {
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+.post-paragraph {
+  margin-top:20px;
+}
+
+.menu-heading {
+  margin-left:30px;
+  margin-bottom:20px;
+}
+
+.projects-heading {
+  margin-top:30px;
+  margin-bottom:20px;
+}
+
+#dashboard-container {
+  margin-bottom:40px;
+}
+
+.projects-subheading {
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+#createproject-form {
+  margin:10px 30px 30px 30px;
+}
+
+.newproject-paragraph {
+  margin:30px 0px 10px 0px;
+}
+
+#adduser-button {
+  margin-top:10px;
+  margin-bottom:30px;
 }
 

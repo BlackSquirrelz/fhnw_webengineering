@@ -25,9 +25,18 @@ session_start();
 $authFunction = function () {
     if (AuthController::authenticate())
         return true;
-    Router::redirect("/login");
+    Router::redirect("/home");
     return false;
 };
+
+Router::route("GET", "/home", function () {
+    UserController::homeView();
+});
+
+Router::route("GET", "/profile", function () {
+    UserController::profileView();
+});
+
 
 Router::route("GET", "/login", function () {
     UserController::loginView();
@@ -51,6 +60,33 @@ Router::route("GET", "/logout", function () {
     AuthController::logout();
     Router::redirect("/login");
 });
+
+// Additional Pages like pricing, projects, features
+
+Router::route("GET", "/pricing", function () {
+    UserController::pricingView();
+});
+
+Router::route("GET", "/features", function () {
+    UserController::featureView();
+});
+
+Router::route("GET", "/projects", function () {
+    UserController::projectView();
+});
+
+Router::route("GET", "/allprojects", function () {
+    UserController::allProjectsView();
+});
+
+Router::route("GET", "/create", function () {
+    UserController::createProjectView();
+});
+
+Router::route("GET", "/settings", function () {
+    UserController::settingsView();
+});
+
 
 Router::route("POST", "/password/request", function () {
     AgentPasswordResetController::resetEmail();

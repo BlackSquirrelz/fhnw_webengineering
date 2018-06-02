@@ -62,6 +62,6 @@ class AgentController
     }
 
     public static function loginView(){
-        echo (new TemplateView("agentLogin.php"))->render();
+        echo (new TemplateView("userLogin.php"))->render();
     }
 }

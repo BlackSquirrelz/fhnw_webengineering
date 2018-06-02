@@ -27,8 +27,40 @@ class UserController
         echo $view->render();
     }
 
+    public static function homeView(){
+        echo (new TemplateView("home.php"))->render();
+    }
+
     public static function registerView(){
         echo (new TemplateView("userEdit.php"))->render();
+    }
+
+    public static function pricingView(){
+        echo (new TemplateView("pricing.php"))->render();
+    }
+
+    public static function featureView(){
+        echo (new TemplateView("features.php"))->render();
+    }
+
+    public static function allProjectsView(){
+        echo (new TemplateView("allProjects.php"))->render();
+    }
+
+    public static function createProjectView(){
+        echo (new TemplateView("projectCreate.php"))->render();
+    }
+
+    public static function profileView(){
+        echo (new TemplateView("profile.php"))->render();
+    }
+
+    public static function projectView(){
+        echo (new TemplateView("projects.php"))->render();
+    }
+
+    public static function settingsView(){
+        echo (new TemplateView("settings.php"))->render();
     }
 
     public static function update(){
