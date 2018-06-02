@@ -26,8 +26,6 @@ isset($this->userValidator) ? $userValidator = $this->userValidator : $userValid
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/navigation.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 

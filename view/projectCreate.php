@@ -27,14 +27,14 @@
         <div
             class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav">
-                <li class="nav-item" role="presentation"><a class="nav-link" href="home.html">Home</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link active" href="projects.html">Projects</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="profile.html">Profile</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="settings.html">Settings</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/home">Home</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link active" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/allprojects">Projects</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/profile">Profile</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/settings">Settings</a></li>
             </ul>
             <form class="form-inline"><input class="form-control" type="search" placeholder="Search..."></form>
             <form class="form-inline ml-auto">
-                <p><a class="btn btn-primary" role="button" href="login.html">Log out</a></p>
+                <p><a class="btn btn-primary" role="button" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/home">Log out</a></p>
             </form>
         </div>
     </div>

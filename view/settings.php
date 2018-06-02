@@ -13,7 +13,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2018_webengineering</title>
+    <title>WE-Timecatcher</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600">
     <link rel="stylesheet" href="assets/css/Footer-Basic.css">
@@ -23,18 +23,18 @@
 
 <body id="home-div">
 <nav class="navbar navbar-light navbar-expand-md">
-    <div class="container-fluid"><a class="navbar-brand" href="#"><img src="assets/img/timecatcher-icon.png" class="logo" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/login"></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+    <div class="container-fluid"><a class="navbar-brand" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/home"><img src="assets/img/timecatcher-icon.png" class="logo" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/login"></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
         <div
             class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav">
-                <li class="nav-item" role="presentation"><a class="nav-link" href="home.html">Home</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="projects.html">Projects</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="profile.html">Profile</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link active" href="settings.html">Settings</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/home">Home</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/allprojects">Projects</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/profile">Profile</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link active" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/settings">Settings</a></li>
             </ul>
             <form class="form-inline"><input class="form-control" type="search" placeholder="Search..."></form>
             <form class="form-inline ml-auto">
-                <p><a class="btn btn-primary" role="button" href="login.html">Log out</a></p>
+                <p><a class="btn btn-primary" role="button" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/home">Log out</a></p>
             </form>
         </div>
     </div>

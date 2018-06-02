@@ -5,6 +5,10 @@
  * Date: 12.09.2017
  * Time: 21:30
  */
+
+/**
+ * Adapted for the use in the Timecatcher Project
+ */
 require_once("config/Autoloader.php");
 
 use router\Router;

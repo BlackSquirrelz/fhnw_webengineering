@@ -12,12 +12,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WE-TimeCatcher</title>
+    <title>2018_webengineering</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Search.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
@@ -34,6 +33,9 @@
         </div>
     </nav>
     <form action="<?php echo $GLOBALS["ROOT_URL"]; ?>/login" method="post">
+        <div class="form-group">
+            <input class="form-control" type="username" name="username" placeholder="Username">
+        </div>
         <div class="form-group">
             <input class="form-control" type="email" name="email" placeholder="Email">
         </div>
@@ -53,7 +55,6 @@
 </div>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/script.js"></script>
 </body>
 
 </html>

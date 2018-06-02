@@ -14,10 +14,14 @@ use domain\User;
 class UserDAO extends BasicDAO {
 
     public function create(User $user) {
-        $stmt = $this->pdoInstance->prepare('INSERT INTO user (first_name, last_name, username, email, password) SELECT :first_name,:last_name, :username, :email, :password WHERE NOT EXISTS (SELECT email FROM user WHERE email =:emailExist);');
+        $stmt = $this->pdoInstance->prepare(
+            'INSERT INTO user (first_name, last_name, username, email, password) 
+SELECT :first_name,:last_name, :username, :email, :password 
+WHERE NOT EXISTS (
+SELECT email FROM user WHERE email =:emailExist);');
         $stmt->bindValue(':first_name', $user->getFirstName());
         $stmt->bindValue(':last_name', $user->getLastName());
-        $stmt->bindValue(':usernbamne', $user->getUserName());
+        $stmt->bindValue(':username', $user->getUserName());
         $stmt->bindValue(':email', $user->getEmail());
         $stmt->bindValue(':emailExist', $user->getEmail());
         $stmt->bindValue(':password', $user->getPassword());
