@@ -21,17 +21,26 @@ class Project
     protected $name;
     /**
      * @AttributeType String
+     *
+     *
+     *
      */
-    protected $email;
+    protected $project_start;
     /**
      * @AttributeType String
      */
-    protected $mobile;
+    protected $project_end;
     /**
      * @AssociationType int
      * @AssociationMultiplicity 1
      */
-    private $agentid;
+    private $project_id;
+
+    /**
+     * @AttributeType String
+     */
+    protected $userId;
+
 
     /**
      * @access public
@@ -78,19 +87,19 @@ class Project
      * @return String
      * @ReturnType String
      */
-    public function getEmail() {
-        return $this->email;
+    public function getStartDate() {
+        return $this->project_start;
     }
 
     /**
      * @access public
-     * @param String email
+     * @param integer projectStart
      * @return void
-     * @ParamType email String
+     * @ParamType projectStart integer
      * @ReturnType void
      */
-    public function setEmail($email) {
-        $this->email = $email;
+    public function setStartDate($project_start) {
+        $this->project_start = $project_start;
     }
 
     /**
@@ -98,19 +107,19 @@ class Project
      * @return String
      * @ReturnType String
      */
-    public function getMobile() {
-        return $this->mobile;
+    public function getEndDate() {
+        return $this->project_end;
     }
 
     /**
-     * @access public
-     * @param String mobile
+    @access public
+     * @param integer projectEnd
      * @return void
-     * @ParamType mobile String
+     * @ParamType projectEnd integer
      * @ReturnType void
      */
-    public function setMobile($mobile) {
-        $this->mobile = $mobile;
+    public function setEndDate($project_end) {
+        $this->project_end = $project_end;
     }
 
     /**
@@ -118,18 +127,18 @@ class Project
      * @return int
      * @ReturnType int
      */
-    public function getAgentid() {
-        return $this->agentid;
+    public function getUserId() {
+        return $this->userId;
     }
 
     /**
      * @access public
-     * @param int agentid
+     * @param int userId
      * @return void
-     * @ParamType agentid int
+     * @ParamType userId int
      * @ReturnType void
      */
-    public function setAgentid($agentid) {
-        $this->agentid = $agentid;
+    public function setUserId($userId) {
+        $this->userId = $userId;
     }
 }
