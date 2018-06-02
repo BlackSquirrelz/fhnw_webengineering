@@ -19,12 +19,14 @@ class AgentDAO extends BasicDAO {
 	 */
 	public function create(Agent $agent) {
         $stmt = $this->pdoInstance->prepare('
-        INSERT INTO agent (name, email, password)
-          SELECT :name,:email,:password
+        INSERT INTO user (first_name, last_name, username, email, password)
+          SELECT :first_name, :last_name, :username, :email, :password
           WHERE NOT EXISTS (
             SELECT email FROM agent WHERE email = :emailExist
         );');
-        $stmt->bindValue(':name', $agent->getName());
+        $stmt->bindValue(':first_name', $agent->getName());
+        $stmt->bindValue(':last_name', $agent->getName());
+        $stmt->bindValue(':username', $agent->getName());
         $stmt->bindValue(':email', $agent->getEmail());
         $stmt->bindValue(':emailExist', $agent->getEmail());
         $stmt->bindValue(':password', $agent->getPassword());

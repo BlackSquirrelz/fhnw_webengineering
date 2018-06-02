@@ -9,7 +9,7 @@ require_once("config/Autoloader.php");
 
 use router\Router;
 use controller\CustomerController;
-use controller\AgentController;
+use controller\UserController;
 use controller\AuthController;
 use controller\ErrorController;
 use controller\AgentPasswordResetController;
@@ -30,15 +30,15 @@ $authFunction = function () {
 };
 
 Router::route("GET", "/login", function () {
-    AgentController::loginView();
+    UserController::loginView();
 });
 
 Router::route("GET", "/register", function () {
-    AgentController::registerView();
+    UserController::registerView();
 });
 
 Router::route("POST", "/register", function () {
-    if(AgentController::register())
+    if(UserController::register())
         Router::redirect("/logout");
 });
 
@@ -74,12 +74,12 @@ Router::route_auth("GET", "/", $authFunction, function () {
     CustomerController::readAll();
 });
 
-Router::route_auth("GET", "/agent/edit", $authFunction, function () {
-    AgentController::editView();
+Router::route_auth("GET", "/user/edit", $authFunction, function () {
+    UserController::editView();
 });
 
-Router::route_auth("POST", "/agent/edit", $authFunction, function () {
-    if(AgentController::update())
+Router::route_auth("POST", "/user/edit", $authFunction, function () {
+    if(UserController::update())
         Router::redirect("/logout");
 });
 

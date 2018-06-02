@@ -7,6 +7,7 @@
  */
 
 namespace controller;
+use view\TemplateView;
 
 
 class ErrorController

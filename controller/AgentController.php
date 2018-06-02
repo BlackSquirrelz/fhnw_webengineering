@@ -12,25 +12,26 @@ use service\AuthServiceImpl;
 use validator\AgentValidator;
 use view\TemplateView;
 use domain\Agent;
+use domain\User;
 
 class AgentController
 {
     public static function editView(){
-        $view = new TemplateView("agentEdit.php");
+        $view = new TemplateView("userEdit.php");
         $view->agent = AuthServiceImpl::getInstance()->readAgent();
-        $view->pageTitle = "WE-CRM";
-        $view->pageHeading = "<strong>WE-CRM | Update</strong> your account.";
+        $view->pageTitle = "WE-Timecatcher";
+        $view->pageHeading = "<strong>WE-Timecatcher | Update</strong> your account.";
         $view->pageSubmitText = "Update";
         $view->pageFormAction = "/agent/edit";
         echo $view->render();
     }
 
     public static function registerView(){
-        echo (new TemplateView("agentEdit.php"))->render();
+        echo (new TemplateView("userEdit.php"))->render();
     }
 
     public static function update(){
-        $view = new TemplateView("agentEdit.php");
+        $view = new TemplateView("userEdit.php");
         $view->pageTitle = "WE-CRM";
         $view->pageHeading = "<strong>WE-CRM | Update</strong> your account.";
         $view->pageSubmitText = "Update";
@@ -53,7 +54,7 @@ class AgentController
         }
         $agent->setPassword("");
         if (is_null($view))
-            $view = new TemplateView("agentEdit.php");
+            $view = new TemplateView("userEdit.php");
         $view->agent = $agent;
         $view->agentValidator = $agentValidator;
         echo $view->render();
