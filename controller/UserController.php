@@ -39,6 +39,10 @@ class UserController
         echo (new TemplateView("pricing.php"))->render();
     }
 
+    public static function whowerareView() {
+        echo (new TemplateView("whowerare.php"))->render();
+    }
+
     public static function featureView(){
         echo (new TemplateView("features.php"))->render();
     }

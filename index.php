@@ -71,6 +71,10 @@ Router::route("GET", "/pricing", function () {
     UserController::pricingView();
 });
 
+Router::route("GET", "/whoweare", function () {
+    UserController::whowerareView();
+});
+
 Router::route("GET", "/features", function () {
     UserController::featureView();
 });

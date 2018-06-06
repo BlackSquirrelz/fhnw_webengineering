@@ -28,8 +28,9 @@
             class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav ml-auto">
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/features">Features</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/pricing">Pricing</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/features">Features</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/whoweare">Who we are</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/login">Log in</a></li>
                 </ul><a class="btn btn-primary" role="button" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/register">SIGN UP</a></div>
     </div>
@@ -43,18 +44,15 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-                <h4>Light</h4>
-                <p>Paragraph</p>
+                <h4>Free Version</h4>
                 <p><a class="btn btn-primary" role="button" href="signup.html">SIGN UP</a></p>
             </div>
             <div class="col-md-4">
-                <h2>Premium</h2>
-                <p>Paragraph</p>
+                <h2>Free Version</h2>
                 <p><a class="btn btn-primary" role="button" href="signup.html" style="font-size:14px;">SIGN UP</a></p>
             </div>
             <div class="col-md-4">
-                <h4>business</h4>
-                <p>Paragraph</p>
+                <h4>Free Version</h4>
                 <p><a class="btn btn-primary" role="button" href="signup.html">SIGN UP</a></p>
             </div>
         </div>
