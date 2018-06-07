@@ -45,7 +45,7 @@
         <div class="form-group">
             <div class="checkbox">
                 <label class="control-label">
-                    <input type="checkbox" name="remember" />Remember me</label>
+                    <input type="checkbox" name="remember" />Remember me </label>
             </div>
         </div>
         <div class="form-group">
