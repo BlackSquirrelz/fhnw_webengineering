@@ -57,7 +57,7 @@ Router::route("POST", "/register", function () {
 
 Router::route("POST", "/login", function () {
     AuthController::login();
-    Router::redirect("/");
+    Router::redirect("/allprojects");
 });
 
 Router::route("GET", "/logout", function () {

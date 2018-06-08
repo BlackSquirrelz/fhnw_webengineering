@@ -183,7 +183,7 @@ class AuthServiceImpl implements AuthService
      * @ParamType type int
      * @ParamType email String
      * @ReturnType String
-     *
+     * *
      * https://paragonie.com/blog/2015/04/secure-authentication-php-with-long-term-persistence
      * https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Authentication
      * https://stackoverflow.com/a/31419246
