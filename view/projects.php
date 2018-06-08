@@ -5,6 +5,13 @@
  * Date: 6/2/18
  * Time: 16:05
  */
+use view\TemplateView;
+use domain\Project;
+use validator\ProjectValidator;
+
+isset($this->project) ? $project = $this->project : $project = new Project();
+isset($this->projectValidator) ? $projectValidator = $this->projectValidator : $projectValidator = new ProjectValidator();
+
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +71,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h6>Project A</h6>
+                <h6><?php echo $project->getName() ?></h6>
             </div>
             <div class="col-md-4">
                 <h6>Project B</h6>

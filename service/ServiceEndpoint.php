@@ -5,6 +5,12 @@
  * Date: 13.10.2017
  * Time: 11:50
  */
+/**
+ * Updated by PhpStorm.
+ * User: blacksquirrelz
+ * Date: 06.05.2018
+ * Time: 21:30
+ */
 
 namespace service;
 
@@ -54,30 +60,30 @@ class ServiceEndpoint
         HTTPHeader::setStatusHeader(HTTPStatusCode::HTTP_202_ACCEPTED);
     }
 
-    public static function findAllCustomer(){
-        $responseData = (new ProjectServiceImpl())->findAllCustomer();
+    public static function findAllProjects(){
+        $responseData = (new ProjectServiceImpl())->findAllProjects();
         HTTPHeader::setHeader("Content-Type: application/json", HTTPStatusCode::HTTP_200_OK, true);
         echo json_encode($responseData);
     }
 
-    public static function readCustomer($id){
-        $responseData = (new ProjectServiceImpl())->readCustomer($id);
+    public static function readProject($id){
+        $responseData = (new ProjectServiceImpl())->readProject($id);
         HTTPHeader::setHeader("Content-Type: application/json", HTTPStatusCode::HTTP_200_OK, true);
         echo json_encode($responseData);
     }
 
-    public static function updateCustomer($customerId = null){
+    public static function updateProject($projectId = null){
         $requestData = json_decode(file_get_contents("php://input"), true);
-        $customer = Customer::Deserialize($requestData);
-        $customerValidator = new CustomerValidator($customer);
-        if($customerValidator->isValid()) {
-            if (is_null($customerId)) {
-                $customer = (new ProjectServiceImpl())->createCustomer($customer);
-                $location = $GLOBALS["ROOT_URL"] . $_SERVER['PATH_INFO'] . $customer->getId();
+        $project = Project::Deserialize($requestData);
+        $projectValidator = new ProjectValidator($project);
+        if($projectValidator->isValid()) {
+            if (is_null($projectId)) {
+                $project = (new ProjectServiceImpl())->createProject($project);
+                $location = $GLOBALS["ROOT_URL"] . $_SERVER['PATH_INFO'] . $project->getId();
                 HTTPHeader::setHeader("Location: " . $location, HTTPStatusCode::HTTP_201_CREATED, true);
             } else {
-                $customer->setId($customerId);
-                (new ProjectServiceImpl())->updateCustomer($customer);
+                $project->setId($projectId);
+                (new ProjectServiceImpl())->updateProject($project);
                 HTTPHeader::setStatusHeader(HTTPStatusCode::HTTP_204_NO_CONTENT);
             }
         }
@@ -87,12 +93,12 @@ class ServiceEndpoint
         return true;
     }
 
-    public static function createCustomer(){
-        return self::updateCustomer();
+    public static function createProject(){
+        return self::updateProject();
     }
 
-    public static function deleteCustomer($id){
-        (new ProjectServiceImpl())->deleteCustomer($id);
+    public static function deleteProject($id){
+        (new ProjectServiceImpl())->deleteProject($id);
         HTTPHeader::setStatusHeader(HTTPStatusCode::HTTP_204_NO_CONTENT);
     }
 

@@ -36,7 +36,7 @@ class Project
      * @AssociationType int
      * @AssociationMultiplicity 1
      */
-    private $project_id;
+    private $projectid;
 
     /**
      * @AttributeType String

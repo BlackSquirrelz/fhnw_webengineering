@@ -101,7 +101,7 @@ class ProjectDAO extends BasicDAO {
      * @ParamType userId int
      * @ReturnType Project[]
      */
-    public function findByUser($userId) {
+    public function findByProjectId($userId) {
         $stmt = $this->pdoInstance->prepare('
             SELECT * FROM project WHERE userid = :userid ORDER BY id;');
         $stmt->bindValue(':userId', $userId);

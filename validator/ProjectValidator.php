@@ -40,7 +40,7 @@ class projectValidator
             }
 
             if (empty($project->getDesc())) {
-                $this->descriptonError = 'Please enter an description';
+                $this->descriptionError = 'Please enter an description';
                 $this->valid = false;
             }
 

@@ -6,6 +6,7 @@
  * Time: 16:04
  */
 
+use view\TemplateView;
 ?>
 
 <!DOCTYPE html>
@@ -50,32 +51,52 @@
     </div>
     <div class="card-body">
         <h4 class="card-title">All projects</h4><input type="search" placeholder="Search in projects...">
-        <div class="row">
-            <div class="col-lg-4">
-                <h6 class="projects-subheading">List of projects working on</h6>
-            </div>
-            <div class="col-lg-8">
-                <h6 class="projects-subheading">Information about selected project</h6>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <p><button class="btn btn-primary" type="button">Project a</button></p>
-            </div>
-            <div class="col-lg-6">
-                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Label</label></div>
-            </div>
-            <div class="col-lg-2">
-                <p class="text-center"><button class="btn btn-primary" type="button">Log time</button></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <p class="text-center">Time</p>
-            </div>
-        </div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID </th>
+                    <th>Project Name </th>
+                    <th>Project Description </th>
+                    <th>Start Date </th>
+                    <th>End Date </th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach($this->allprojects as $project): /* @var Project $project */ ?>
+                    <tr>
+                        <td><?php echo $project->getId(); ?> </td>
+                        <td><?php echo TemplateView::noHTML($project->getName()); ?></td>
+                        <td><?php echo TemplateView::noHTML($project->getDesc()); ?> </td>
+                        <td><?php echo TemplateView::noHTML($project->getStartDate()); ?> </td>
+                        <td><?php echo TemplateView::noHTML($project->getEndDate()); ?> </td>
+                        <td>
+                        <div class="btn-group btn-group-sm" role="group">
+                            <a class="btn btn-default" role="button" href="project/edit?id=<?php echo $project->getId(); ?>"> <i class="fa fa-edit"></i></a>
+                            <button class="btn btn-default" type="button" data-target="#confirm-modal" data-toggle="modal" data-href="project/delete?id=<?php echo $project->getId(); ?>"> <i class="glyphicon glyphicon-trash"></i></button>
+                        </div>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
         <div class="form-group">
-            <a class="btn btn-primary" role="button" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/create">Create New Project</a>
+            <a class="btn btn-primary" role="button" href="project/create">Create New Project</a>
+            <a target="_blank" class="btn btn-default" role="button" href="project/pdf">Create a PDF Report<i class="fa fa-file-pdf-o"></i></a>
+            <a class="btn btn-primary" role="button" href="project/email">Send me the list as an Email <i class="fa fa-envelope-o"></i></a>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="confirm-modal">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <h4 class="modal-title">Deletion of a <strong>customer</strong>.</h4></div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete this project?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" type="button" data-dismiss="modal">NO! </button><a class="btn btn-primary" role="button" href="#">Sure Go Ahead! </a></div>
+                </div>
+            </div>
         </div>
 </div>
 <script src="assets/js/jquery.min.js"></script>
