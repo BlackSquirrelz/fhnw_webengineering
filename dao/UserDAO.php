@@ -10,7 +10,10 @@ namespace dao;
 
 use domain\User;
 
-
+/**
+ * @access public
+ * @author blacksquirrelz
+ */
 class UserDAO extends BasicDAO {
 
     /**
@@ -20,11 +23,10 @@ class UserDAO extends BasicDAO {
      * @ParamType user User
      * @ReturnType User
      */
-
     public function create(User $user) {
         $stmt = $this->pdoInstance->prepare('
-            INSERT INTO user (id, first_name, last_name, username, email, password, is_admin, task) 
-SELECT :id,:first_name,:last_name, :username,:email,:password,:is_admin,:task');
+            INSERT INTO user (id, first_name, last_name, username, email, password)
+SELECT :id,:first_name,:last_name, :username,:email,:password');
         $stmt->bindValue(':id', '');
         $stmt->bindValue(':first_name', $user->getFirstName());
         $stmt->bindValue(':last_name', $user->getLastName());
@@ -32,11 +34,17 @@ SELECT :id,:first_name,:last_name, :username,:email,:password,:is_admin,:task');
         $stmt->bindValue(':email', $user->getEmail());
         //$stmt->bindValue(':emailExist', $user->getEmail());
         $stmt->bindValue(':password', $user->getPassword());
-        $stmt->bindValue(':is_admin', 0);
-        $stmt->bindValue(':task', "");
         $stmt->execute();
         return $this->read($this->pdoInstance->lastInsertId());
     }
+
+    /**
+     * @access public
+     * @param int userId
+     * @return User
+     * @ParamType userId int
+     * @ReturnType User
+     */
 
     public function read($userId){
         $stmt = $this->pdoInstance->prepare('SELECT * FROM user WHERE id = :id;');
@@ -48,6 +56,13 @@ SELECT :id,:first_name,:last_name, :username,:email,:password,:is_admin,:task');
         return null;
     }
 
+    /**
+     * @access public
+     * @param User user
+     * @return User
+     * @ParamType user User
+     * @ReturnType User
+     */
     public function update(User $user) {
         $stmt = $this->pdoInstance->prepare('
                 UPDATE user SET first_name=:first_name,last_name=:last_name, username=:username, email=:email, password=:password WHERE id = :id;');

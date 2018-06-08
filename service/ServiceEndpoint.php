@@ -42,7 +42,7 @@ class ServiceEndpoint
                 list($type, $data) = explode(" ", $_SERVER["HTTP_AUTHORIZATION"], 2);
                 if (strcasecmp($type, "Basic") == 0) {
                     list($name, $password) = explode(':', base64_decode($data));
-                    if (AuthServiceImpl::getInstance()->verifyAgent($name, $password)) {
+                    if (AuthServiceImpl::getInstance()->verifyUser($name, $password)) {
                         return true;
                     }
                 }

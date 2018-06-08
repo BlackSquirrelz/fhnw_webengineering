@@ -16,7 +16,7 @@ use controller\ProjectController;
 use controller\UserController;
 use controller\AuthController;
 use controller\ErrorController;
-use controller\AgentPasswordResetController;
+use controller\UserPasswordResetController;
 use controller\EmailController;
 use controller\PDFController;
 use service\ServiceEndpoint;
@@ -29,7 +29,7 @@ session_start();
 $authFunction = function () {
     if (AuthController::authenticate())
         return true;
-    Router::redirect("/home");
+    Router::redirect("/login");
     return false;
 };
 
@@ -57,19 +57,15 @@ Router::route("POST", "/register", function () {
 
 Router::route("POST", "/login", function () {
     AuthController::login();
-    Router::redirect("/allprojects");
+    Router::redirect("/");
 });
 
 Router::route("GET", "/logout", function () {
     AuthController::logout();
-    Router::redirect("/login");
+    Router::redirect("/home");
 });
 
-// Additional Pages like pricing, projects, features
-
-Router::route("GET", "/pricing", function () {
-    UserController::pricingView();
-});
+// Additional Pages like who who we are, projects, features
 
 Router::route("GET", "/whoweare", function () {
     UserController::whowerareView();
@@ -97,25 +93,25 @@ Router::route("GET", "/settings", function () {
 
 
 Router::route("POST", "/password/request", function () {
-    AgentPasswordResetController::resetEmail();
+    UserPasswordResetController::resetEmail();
     Router::redirect("/login");
 });
 
 Router::route("GET", "/password/request", function () {
-    AgentPasswordResetController::requestView();
+    UserPasswordResetController::requestView();
 });
 
 Router::route("POST", "/password/reset", function () {
-    AgentPasswordResetController::reset();
+    UserPasswordResetController::reset();
     Router::redirect("/login");
 });
 
 Router::route("GET", "/password/reset", function () {
-    AgentPasswordResetController::resetView();
+    UserPasswordResetController::resetView();
 });
 
 Router::route_auth("GET", "/", $authFunction, function () {
-    CustomerController::readAll();
+    ProjectController::readAll();
 });
 
 Router::route_auth("GET", "/user/edit", $authFunction, function () {
@@ -145,14 +141,13 @@ Router::route_auth("POST", "/project/update", $authFunction, function () {
         Router::redirect("/");
 });
 
-//TODO: update to match all project
-Router::route_auth("GET", "/allprojects/email", $authFunction, function () {
-    EmailController::sendMeMyCustomers();
+Router::route_auth("GET", "/project/email", $authFunction, function () {
+    EmailController::sendMeMyProjects();
     Router::redirect("/");
 });
 
-Router::route_auth("GET", "/allprojects/pdf", $authFunction, function () {
-    PDFController::generatePDFCustomers();
+Router::route_auth("GET", "/project/pdf", $authFunction, function () {
+    PDFController::generatePDFProjects();
 });
 
 $authAPIBasicFunction = function () {
@@ -178,23 +173,23 @@ Router::route_auth("HEAD", "/api/token", $authAPITokenFunction, function () {
 });
 
 Router::route_auth("GET", "/api/project", $authAPITokenFunction, function () {
-    ServiceEndpoint::findAllCustomer();
+    ServiceEndpoint::findAllProjects();
 });
 
 Router::route_auth("GET", "/api/project/{id}", $authAPITokenFunction, function ($id) {
-    ServiceEndpoint::readCustomer($id);
+    ServiceEndpoint::readProject($id);
 });
 
 Router::route_auth("PUT", "/api/project/{id}", $authAPITokenFunction, function ($id) {
-    ServiceEndpoint::updateCustomer($id);
+    ServiceEndpoint::updateProject($id);
 });
 
 Router::route_auth("POST", "/api/project", $authAPITokenFunction, function () {
-    ServiceEndpoint::createCustomer();
+    ServiceEndpoint::createProject();
 });
 
 Router::route_auth("DELETE", "/api/project/{id}", $authAPITokenFunction, function ($id) {
-    ServiceEndpoint::deleteCustomer($id);
+    ServiceEndpoint::deleteProject($id);
 });
 
 try {

@@ -36,13 +36,7 @@ class Project
      * @AssociationType int
      * @AssociationMultiplicity 1
      */
-    private $projectid;
-
-    /**
-     * @AttributeType String
-     */
-    protected $userId;
-
+    private $userId;
 
     /**
      * @access public

@@ -8,7 +8,10 @@
 
 namespace domain;
 
-
+/**
+ * @access private
+ * @author blacksquirrelz
+ */
 class User
 {
     /**
@@ -36,10 +39,10 @@ class User
      */
     private $password;
     /**
-     * @AssociationType Customer[]
+     * @AssociationType User[]
      * @AssociationMultiplicity 0..*
      */
-    private $customer;
+    private $user;
 
     /**
      * @access public
@@ -163,21 +166,21 @@ class User
 
     /**
      * @access public
-     * @return Customer[]
-     * @ReturnType Customer[]
+     * @return User[]
+     * @ReturnType User[]
      */
-    public function getCustomer() {
-        return $this->customer;
+    public function getUser() {
+        return $this->user;
     }
 
     /**
      * @access public
-     * @param Customer[] customer
+     * @param User[] user
      * @return void
-     * @ParamType customer Customer[]
+     * @ParamType user User[]
      * @ReturnType void
      */
-    public function setCustomer(array $customer) {
-        $this->customer = $customer;
+    public function setUser(array $user) {
+        $this->user = $user;
     }
 }

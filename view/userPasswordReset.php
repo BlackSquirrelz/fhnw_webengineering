@@ -28,9 +28,9 @@ use view\TemplateView;
         <h2 class="text-center"><strong>Oops, I forgot my password.</strong></h2></div>
     <form action="<?php echo $GLOBALS["ROOT_URL"]; ?>/password/reset" method="post">
         <input type="hidden" name="token" value="<?php echo TemplateView::noHTML($this->token);?>"/>
-        <div class="form-group <?php echo isset($this->agentValidator) && $this->agentValidator->isPasswordError() ? "has-error" : ""; ?>">
+        <div class="form-group <?php echo isset($this->userValidator) && $this->userValidator->isPasswordError() ? "has-error" : ""; ?>">
             <input class="form-control" type="password" name="password" placeholder="Password">
-            <p class="help-block"><?php echo isset($this->agentValidator) && $this->agentValidator->isPasswordError() ? $this->agentValidator->getPasswordError() : ""; ?></p>
+            <p class="help-block"><?php echo isset($this->userValidator) && $this->userValidator->isPasswordError() ? $this->userValidator->getPasswordError() : ""; ?></p>
         </div>
         <div class="form-group">
             <button class="btn btn-primary btn-block" type="submit">Reset</button>

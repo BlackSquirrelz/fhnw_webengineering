@@ -14,9 +14,9 @@ use service\PDFServiceClient;
 
 class PDFController
 {
-    public static function generatePDFCustomers(){
-        $pdfView = new TemplateView("customerListPDF.php");
-        $pdfView->customers = (new ProjectServiceImpl())->findAllCustomer();
+    public static function generatePDFProjects(){
+        $pdfView = new TemplateView("projectsListPDF.php");
+        $pdfView->projects = (new ProjectServiceImpl())->findAllProjects();
         $result = PDFServiceClient::sendPDF($pdfView->render());
         header("Content-Type: application/pdf", NULL, 200);
         echo $result;

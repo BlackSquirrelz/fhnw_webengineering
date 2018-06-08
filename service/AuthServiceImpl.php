@@ -121,7 +121,9 @@ class AuthServiceImpl implements AuthService
      * @param String email
      * @param String password
      * @return boolean
-     * @ParamType name string
+     * @ParamType first_name string
+     * @ParamType last_name string
+     * @ParamType username string
      * @ParamType email String
      * @ParamType password String
      * @ReturnType boolean
