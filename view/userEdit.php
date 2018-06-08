@@ -14,7 +14,7 @@ use domain\User;
 use validator\UserValidator;
 
 isset($this->user) ? $user = $this->user : $user = new User();
-isset($this->userValidator) ? $userValidator = $this->userValidator : $userValidator = new UserValidator()
+isset($this->userValidator) ? $userValidator = $this->userValidator : $userValidator = new UserValidator();
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,10 +34,6 @@ isset($this->userValidator) ? $userValidator = $this->userValidator : $userValid
     <div class="page-header">
         <h2 class="text-center"><?php echo isset($this->pageHeading) ? $this->pageHeading : "<strong>WE-Timecatcher</strong> your account. "; ?></h2></div>
     <form action="<?php echo $GLOBALS["ROOT_URL"]; ?><?php echo isset($this->pageFormAction) ? $this->pageFormAction : "/register"; ?>" method="post">
-        <div class="form-group <?php echo $userValidator->isUsernameError() ? "has-error" : ""; ?>">
-            <input class="form-control" type="text" name="username" placeholder="User Name" value="<?php echo $user->getUserName() ?>">
-            <p class="help-block"><?php echo $userValidator->getUsernameError() ?></p>
-        </div>
         <div class="form-group <?php echo $userValidator->isFirstNameError() ? "has-error" : ""; ?>">
             <input class="form-control" type="text" name="first_name" placeholder="First Name" value="<?php echo $user->getFirstName() ?>">
             <p class="help-block"><?php echo $userValidator->getFirstNameError() ?></p>
@@ -45,6 +41,10 @@ isset($this->userValidator) ? $userValidator = $this->userValidator : $userValid
         <div class="form-group <?php echo $userValidator->isLastNameError() ? "has-error" : ""; ?>">
             <input class="form-control" type="text" name="last_name" placeholder="Last Name" value="<?php echo $user->getLastName() ?>">
             <p class="help-block"><?php echo $userValidator->getLastNameError() ?></p>
+        </div>
+        <div class="form-group <?php echo $userValidator->isUsernameError() ? "has-error" : ""; ?>">
+            <input class="form-control" type="text" name="username" placeholder="User Name" value="<?php echo $user->getUserName() ?>">
+            <p class="help-block"><?php echo $userValidator->getUsernameError() ?></p>
         </div>
         <div class="form-group <?php echo $userValidator->isEmailError() ? "has-error" : ""; ?>">
             <input class="form-control" type="email" name="email" placeholder="Email" value="<?php echo $user->getEmail() ?>">
@@ -61,7 +61,6 @@ isset($this->userValidator) ? $userValidator = $this->userValidator : $userValid
 </div>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/script.js"></script>
 </body>
 
 </html>

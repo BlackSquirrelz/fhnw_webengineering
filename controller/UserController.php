@@ -20,7 +20,7 @@ class UserController
     public static function editView(){
         $view = new TemplateView("userEdit.php");
         $view->user = AuthServiceImpl::getInstance()->readUser();
-        $view->pageTitle = "TimeCatcher";
+        $view->pageTitle = "WE-TimeCatcher";
         $view->pageHeading = "<strong>TimeCatcher | Update</strong> your account.";
         $view->pageSubmitText = "Update";
         $view->pageFormAction = "/user/edit";
@@ -81,7 +81,7 @@ class UserController
         $user->setPassword($_POST["password"]);
         $userValidator = new userValidator($user);
         if($userValidator->isValid()){
-            if(AuthServiceImpl::getInstance()->edituser($user->getFirstName(),$user->getLastName(),$user->getUserName(), $user->getEmail(), $user->getPassword())){
+            if(AuthServiceImpl::getInstance()->edituser($user->getUserName(), $user->getFirstName(),$user->getLastName(), $user->getEmail(), $user->getPassword())){
                 return true;
             }else{
                 $userValidator->setEmailError("Email already exists");

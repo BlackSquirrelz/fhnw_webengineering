@@ -13,18 +13,27 @@ use domain\User;
 
 class UserDAO extends BasicDAO {
 
+    /**
+     * @access public
+     * @param User user
+     * @return User
+     * @ParamType user User
+     * @ReturnType User
+     */
+
     public function create(User $user) {
-        $stmt = $this->pdoInstance->prepare(
-            'INSERT INTO user (first_name, last_name, username, email, password) 
-SELECT :first_name,:last_name, :username, :email, :password 
-WHERE NOT EXISTS (
-SELECT email FROM user WHERE email =:emailExist);');
+        $stmt = $this->pdoInstance->prepare('
+            INSERT INTO user (id, first_name, last_name, username, email, password, is_admin, task) 
+SELECT :id,:first_name,:last_name, :username,:email,:password,:is_admin,:task');
+        $stmt->bindValue(':id', '');
         $stmt->bindValue(':first_name', $user->getFirstName());
         $stmt->bindValue(':last_name', $user->getLastName());
         $stmt->bindValue(':username', $user->getUserName());
         $stmt->bindValue(':email', $user->getEmail());
-        $stmt->bindValue(':emailExist', $user->getEmail());
+        //$stmt->bindValue(':emailExist', $user->getEmail());
         $stmt->bindValue(':password', $user->getPassword());
+        $stmt->bindValue(':is_admin', 0);
+        $stmt->bindValue(':task', "");
         $stmt->execute();
         return $this->read($this->pdoInstance->lastInsertId());
     }

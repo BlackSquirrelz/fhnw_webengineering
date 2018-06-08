@@ -30,10 +30,10 @@ class Config
                 self::$config["pdo"]["dsn"] = "pgsql" . ":host=" . $dbopts["host"] . ";port=" . $dbopts["port"] . "; dbname=" . ltrim($dbopts["path"], '/') . "; sslmode=require";
                 self::$config["pdo"]["user"] = $dbopts["user"];
                 self::$config["pdo"]["password"] = $dbopts["pass"];
-            }
+            } // This configuration is for the SENDGRID (EMAIL Client)
             if (isset($_ENV["SENDGRID_APIKEY"])) {
                 self::$config["email"]["sendgrid-apikey"] = getenv('SENDGRID_APIKEY');
-            }
+            } // This is the configuration for the .pdf generator
             if (isset($_ENV["HYPDF_USER"])) {
                 self::$config["pdf"]["hypdf-user"] = getenv('HYPDF_USER');
             }
