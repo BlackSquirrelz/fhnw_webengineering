@@ -7,10 +7,10 @@
  */
 use view\TemplateView;
 use domain\Customer;
-use validator\CustomerValidator;
+use validator\projectValidator;
 
 isset($this->customer) ? $customer = $this->customer : $customer = new Customer();
-isset($this->customerValidator) ? $customerValidator = $this->customerValidator : $customerValidator = new CustomerValidator();
+isset($this->customerValidator) ? $customerValidator = $this->customerValidator : $customerValidator = new projectValidator();
 ?>
 <div class="container">
     <div class="page-header">

@@ -20,9 +20,11 @@ class Project
      */
     protected $name;
     /**
+    * @AttributeType String
+    */
+    protected $description;
+    /**
      * @AttributeType String
-     *
-     *
      *
      */
     protected $project_start;
@@ -81,7 +83,25 @@ class Project
     public function setName($name) {
         $this->name = $name;
     }
+    /**
+     * @access public
+     * @param String name
+     * @return void
+     * @ParamType name String
+     * @ReturnType void
+     */
+    public function setDesc($description) {
+        $this->description = $description;
+    }
 
+    /**
+     * @access public
+     * @return String
+     * @ReturnType String
+     */
+    public function getDesc() {
+        return $this->description;
+    }
     /**
      * @access public
      * @return String

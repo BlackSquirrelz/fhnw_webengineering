@@ -34,7 +34,7 @@
             </ul>
             <form class="form-inline"><input class="form-control" type="search" placeholder="Search..."></form>
             <form class="form-inline ml-auto">
-                <p><a class="btn btn-primary" role="button" href="login.html">Log out</a></p>
+                <p><a class="btn btn-primary" role="button" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/home"">Log out</a></p>
             </form>
         </div>
     </div>

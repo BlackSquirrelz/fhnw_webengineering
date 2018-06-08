@@ -12,7 +12,7 @@
 require_once("config/Autoloader.php");
 
 use router\Router;
-use controller\CustomerController;
+use controller\ProjectController;
 use controller\UserController;
 use controller\AuthController;
 use controller\ErrorController;
@@ -127,30 +127,31 @@ Router::route_auth("POST", "/user/edit", $authFunction, function () {
         Router::redirect("/logout");
 });
 
-Router::route_auth("GET", "/customer/create", $authFunction, function () {
-    CustomerController::create();
+Router::route_auth("GET", "/project/create", $authFunction, function () {
+    ProjectController::create();
 });
 
-Router::route_auth("GET", "/customer/edit", $authFunction, function () {
-    CustomerController::edit();
+Router::route_auth("GET", "/project/edit", $authFunction, function () {
+    ProjectController::edit();
 });
 
-Router::route_auth("GET", "/customer/delete", $authFunction, function () {
-    CustomerController::delete();
+Router::route_auth("GET", "/project/delete", $authFunction, function () {
+    ProjectController::delete();
     Router::redirect("/");
 });
 
-Router::route_auth("POST", "/customer/update", $authFunction, function () {
-    if(CustomerController::update())
+Router::route_auth("POST", "/project/update", $authFunction, function () {
+    if(ProjectController::update())
         Router::redirect("/");
 });
 
-Router::route_auth("GET", "/customer/email", $authFunction, function () {
+//TODO: update to match all project
+Router::route_auth("GET", "/allprojects/email", $authFunction, function () {
     EmailController::sendMeMyCustomers();
     Router::redirect("/");
 });
 
-Router::route_auth("GET", "/customer/pdf", $authFunction, function () {
+Router::route_auth("GET", "/allprojects/pdf", $authFunction, function () {
     PDFController::generatePDFCustomers();
 });
 
@@ -176,23 +177,23 @@ Router::route_auth("HEAD", "/api/token", $authAPITokenFunction, function () {
     ServiceEndpoint::validateToken();
 });
 
-Router::route_auth("GET", "/api/customer", $authAPITokenFunction, function () {
+Router::route_auth("GET", "/api/project", $authAPITokenFunction, function () {
     ServiceEndpoint::findAllCustomer();
 });
 
-Router::route_auth("GET", "/api/customer/{id}", $authAPITokenFunction, function ($id) {
+Router::route_auth("GET", "/api/project/{id}", $authAPITokenFunction, function ($id) {
     ServiceEndpoint::readCustomer($id);
 });
 
-Router::route_auth("PUT", "/api/customer/{id}", $authAPITokenFunction, function ($id) {
+Router::route_auth("PUT", "/api/project/{id}", $authAPITokenFunction, function ($id) {
     ServiceEndpoint::updateCustomer($id);
 });
 
-Router::route_auth("POST", "/api/customer", $authAPITokenFunction, function () {
+Router::route_auth("POST", "/api/project", $authAPITokenFunction, function () {
     ServiceEndpoint::createCustomer();
 });
 
-Router::route_auth("DELETE", "/api/customer/{id}", $authAPITokenFunction, function ($id) {
+Router::route_auth("DELETE", "/api/project/{id}", $authAPITokenFunction, function ($id) {
     ServiceEndpoint::deleteCustomer($id);
 });
 

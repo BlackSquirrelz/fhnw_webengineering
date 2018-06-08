@@ -73,7 +73,10 @@
             <div class="col">
                 <p class="text-center">Time</p>
             </div>
-        </div><a class="btn btn-primary" role="button" href="createnewproject.html">Create New Project</a></div>
+        </div>
+        <div class="form-group">
+            <a class="btn btn-primary" role="button" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/create">Create New Project</a>
+        </div>
 </div>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
