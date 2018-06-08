@@ -27,10 +27,10 @@
         <div
             class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav">
-                <li class="nav-item" role="presentation"><a class="nav-link" href="home.html">Home</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link active" href="projects.html">Projects</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="profile.html">Profile</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="settings.html">Settings</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/home"</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link active" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/projects">Projects</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/profile">Profile</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/settings">Settings</a></li>
             </ul>
             <form class="form-inline"><input class="form-control" type="search" placeholder="Search..."></form>
             <form class="form-inline ml-auto">
@@ -43,8 +43,8 @@
 <div class="card">
     <div class="card-header">
         <ul class="nav nav-tabs card-header-tabs">
-            <li class="nav-item"><a class="nav-link active" href="projects.html">Dashboard</a></li>
-            <li class="nav-item"><a class="nav-link" href="allprojects.html">All Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/projects"> Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/allprojects">All Projects</a></li>
         </ul>
     </div>
 </div>
