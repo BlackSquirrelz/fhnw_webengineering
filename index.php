@@ -29,14 +29,11 @@ session_start();
 $authFunction = function () {
     if (AuthController::authenticate())
         return true;
-    var_dump('shit');
-    //Router::redirect("/login");
+    Router::redirect("/login");
     return false;
 };
 
-Router::route("GET", "/profile", function () {
-    UserController::profileView();
-});
+
 Router::route("GET", "/home", function () {
     UserController::homeView();
 });
@@ -75,17 +72,7 @@ Router::route("GET", "/features", function () {
     UserController::featureView();
 });
 
-Router::route("GET", "/projects", function () {
-    UserController::projectView();
-});
 
-Router::route("GET", "/create", function () {
-    UserController::createProjectView();
-});
-
-Router::route("GET", "/settings", function () {
-    UserController::settingsView();
-});
 
 
 Router::route("POST", "/password/request", function () {
@@ -104,6 +91,22 @@ Router::route("POST", "/password/reset", function () {
 
 Router::route("GET", "/password/reset", function () {
     UserPasswordResetController::resetView();
+});
+
+Router::route_auth("GET", "/profile", $authFunction, function () {
+    UserController::profileView();
+});
+
+Router::route_auth("GET", "/projects", $authFunction, function () {
+    UserController::projectView();
+});
+
+Router::route_auth("GET", "/create",$authFunction, function () {
+    UserController::createProjectView();
+});
+
+Router::route_auth("GET", "/settings",$authFunction, function () {
+    UserController::settingsView();
 });
 
 Router::route_auth("GET", "/allprojects", $authFunction,function () {
