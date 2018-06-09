@@ -18,25 +18,25 @@ class Project
     /**
      * @AttributeType String
      */
-    protected $name;
+    protected $project_name;
     /**
     * @AttributeType String
     */
-    protected $description;
+    protected $project_desc;
     /**
      * @AttributeType String
      *
      */
-    protected $project_start;
+    protected $p_startdate;
     /**
      * @AttributeType String
      */
-    protected $project_end;
+    protected $p_enddate;
     /**
      * @AssociationType int
      * @AssociationMultiplicity 1
      */
-    private $userId;
+    private $userID;
 
     /**
      * @access public
@@ -64,7 +64,7 @@ class Project
      * @ReturnType String
      */
     public function getName() {
-        return $this->name;
+        return $this->project_name;
     }
 
     /**
@@ -74,8 +74,8 @@ class Project
      * @ParamType name String
      * @ReturnType void
      */
-    public function setName($name) {
-        $this->name = $name;
+    public function setName($project_name) {
+        $this->project_name = $project_name;
     }
     /**
      * @access public
@@ -84,8 +84,8 @@ class Project
      * @ParamType name String
      * @ReturnType void
      */
-    public function setDesc($description) {
-        $this->description = $description;
+    public function setDesc($project_desc) {
+        $this->project_desc = $project_desc;
     }
 
     /**
@@ -94,7 +94,7 @@ class Project
      * @ReturnType String
      */
     public function getDesc() {
-        return $this->description;
+        return $this->project_desc;
     }
     /**
      * @access public
@@ -102,7 +102,7 @@ class Project
      * @ReturnType String
      */
     public function getStartDate() {
-        return $this->project_start;
+        return $this->p_startdate;
     }
 
     /**
@@ -113,7 +113,7 @@ class Project
      * @ReturnType void
      */
     public function setStartDate($project_start) {
-        $this->project_start = $project_start;
+        $this->p_startdate = $project_start;
     }
 
     /**
@@ -122,7 +122,7 @@ class Project
      * @ReturnType String
      */
     public function getEndDate() {
-        return $this->project_end;
+        return $this->p_enddate;
     }
 
     /**
@@ -133,7 +133,7 @@ class Project
      * @ReturnType void
      */
     public function setEndDate($project_end) {
-        $this->project_end = $project_end;
+        $this->p_enddate = $project_end;
     }
 
     /**
@@ -142,7 +142,7 @@ class Project
      * @ReturnType int
      */
     public function getUserId() {
-        return $this->userId;
+        return $this->userID;
     }
 
     /**
@@ -152,7 +152,7 @@ class Project
      * @ParamType userId int
      * @ReturnType void
      */
-    public function setUserId($userId) {
-        $this->userId = $userId;
+    public function setUserId($userID) {
+        $this->userID = $userID;
     }
 }

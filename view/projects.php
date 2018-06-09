@@ -20,7 +20,7 @@ isset($this->projectValidator) ? $projectValidator = $this->projectValidator : $
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2018_webengineering</title>
+    <title>WE-Timecatcher</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600">
     <link rel="stylesheet" href="assets/css/Footer-Basic.css">
@@ -61,9 +61,6 @@ isset($this->projectValidator) ? $projectValidator = $this->projectValidator : $
             <div class="col-md-6 col-xl-8">
                 <h5 class="projects-heading">Recent Projects</h5>
             </div>
-            <div class="col-md-6 col-xl-4 offset-xl-2" style="margin:0px;">
-                <h5 class="projects-heading">Upcoming tasks</h5>
-            </div>
         </div>
     </div>
 </div>
@@ -72,52 +69,6 @@ isset($this->projectValidator) ? $projectValidator = $this->projectValidator : $
         <div class="row">
             <div class="col-md-4">
                 <h6><?php echo $project->getName() ?></h6>
-            </div>
-            <div class="col-md-4">
-                <h6>Project B</h6>
-            </div>
-            <div class="col-md-4">
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <div class="form-check" id="checkbox-firstupcoming"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Task 1</label></div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Task 2</label></div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3"><label class="form-check-label" for="formCheck-3">Task 3</label></div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<div>
-    <div class="container" id="dashboard-container">
-        <div class="row">
-            <div class="col-md-12">
-                <h5 class="dashboard-heading">Completed Tasks</h5>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <p id="dashboard-firsttask">Latest task completed</p>
-                    </li>
-                    <li class="list-group-item">
-                        <p id="dashboard-secondtask">Task completed</p>
-                    </li>
-                    <li class="list-group-item">
-                        <p id="dashboard-thirdtask">Task completed</p>
-                    </li>
-                    <li class="list-group-item">
-                        <p id="dashboard-fourthtask">Task completed</p>
-                    </li>
-                    <li class="list-group-item">
-                        <p id="dashboard-fifthtask">Task completed</p>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>

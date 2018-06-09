@@ -7,6 +7,7 @@
  */
 
 use view\TemplateView;
+
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +35,6 @@ use view\TemplateView;
                 <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/profile">Profile</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/settings">Settings</a></li>
             </ul>
-            <form class="form-inline"><input class="form-control" type="search" placeholder="Search..."></form>
             <form class="form-inline ml-auto">
                 <p><a class="btn btn-primary" role="button" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/home">Log out</a></p>
             </form>
@@ -59,6 +59,7 @@ use view\TemplateView;
                     <th>Project Description </th>
                     <th>Start Date </th>
                     <th>End Date </th>
+                    <th>User</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -70,6 +71,7 @@ use view\TemplateView;
                         <td><?php echo TemplateView::noHTML($project->getDesc()); ?> </td>
                         <td><?php echo TemplateView::noHTML($project->getStartDate()); ?> </td>
                         <td><?php echo TemplateView::noHTML($project->getEndDate()); ?> </td>
+                        <td><?php echo TemplateView::noHTML($project->getUserId()); ?> </td>
                         <td>
                         <div class="btn-group btn-group-sm" role="group">
                             <a class="btn btn-default" role="button" href="project/edit?id=<?php echo $project->getId(); ?>"> <i class="fa fa-edit"></i></a>

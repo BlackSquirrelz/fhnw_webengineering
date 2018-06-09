@@ -127,7 +127,8 @@ Router::route_auth("POST", "/user/edit", $authFunction, function () {
 });
 
 Router::route_auth("GET", "/project/create", $authFunction, function () {
-    ProjectController::create();
+    if(ProjectController::create())
+        Router::redirect("/allprojects");
 });
 
 Router::route_auth("GET", "/project/edit", $authFunction, function () {
