@@ -8,7 +8,10 @@
 
 namespace domain;
 
-
+/**
+ * @access public
+ * @author blacksquirrelz
+ */
 class AuthToken
 {
     /**

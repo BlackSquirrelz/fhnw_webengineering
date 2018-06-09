@@ -23,6 +23,7 @@ interface AuthService {
 
     /**
      * @access public
+     * @param String username
      * @param String email
      * @param String password
      * @return boolean
@@ -31,7 +32,7 @@ interface AuthService {
      * @ParamType password String
      * @ReturnType boolean
      */
-    public function verifyUser($email, $password);
+    public function verifyUser($username, $email, $password);
 
     /**
      * @access public
