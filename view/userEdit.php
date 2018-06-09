@@ -34,6 +34,10 @@ isset($this->userValidator) ? $userValidator = $this->userValidator : $userValid
     <div class="page-header">
         <h2 class="text-center"><?php echo isset($this->pageHeading) ? $this->pageHeading : "<strong>WE-Timecatcher</strong> your account. "; ?></h2></div>
     <form action="<?php echo $GLOBALS["ROOT_URL"]; ?><?php echo isset($this->pageFormAction) ? $this->pageFormAction : "/register"; ?>" method="post">
+        <div class="form-group <?php echo $userValidator->isUsernameError() ? "has-error" : ""; ?>">
+            <input class="form-control" type="text" name="username" placeholder="User Name" value="<?php echo $user->getUserName() ?>">
+            <p class="help-block"><?php echo $userValidator->getUsernameError() ?></p>
+        </div>
         <div class="form-group <?php echo $userValidator->isFirstNameError() ? "has-error" : ""; ?>">
             <input class="form-control" type="text" name="first_name" placeholder="First Name" value="<?php echo $user->getFirstName() ?>">
             <p class="help-block"><?php echo $userValidator->getFirstNameError() ?></p>
@@ -41,10 +45,6 @@ isset($this->userValidator) ? $userValidator = $this->userValidator : $userValid
         <div class="form-group <?php echo $userValidator->isLastNameError() ? "has-error" : ""; ?>">
             <input class="form-control" type="text" name="last_name" placeholder="Last Name" value="<?php echo $user->getLastName() ?>">
             <p class="help-block"><?php echo $userValidator->getLastNameError() ?></p>
-        </div>
-        <div class="form-group <?php echo $userValidator->isUsernameError() ? "has-error" : ""; ?>">
-            <input class="form-control" type="text" name="username" placeholder="User Name" value="<?php echo $user->getUserName() ?>">
-            <p class="help-block"><?php echo $userValidator->getUsernameError() ?></p>
         </div>
         <div class="form-group <?php echo $userValidator->isEmailError() ? "has-error" : ""; ?>">
             <input class="form-control" type="email" name="email" placeholder="Email" value="<?php echo $user->getEmail() ?>">
@@ -55,7 +55,7 @@ isset($this->userValidator) ? $userValidator = $this->userValidator : $userValid
             <p class="help-block"><?php echo $userValidator->getPasswordError() ?></p>
         </div>
         <div class="form-group">
-            <button class="btn btn-primary btn-block" type="submit"><?php echo isset($this->pageSubmitText) ? $this->pageSubmitText : "Register"; ?></button>
+            <button class="btn btn-primary btn-block" type="submit"><?php echo isset($this->pageSubmitText) ? $this->pageSubmitText : "Register Now!"; ?></button>
         </div>
     </form>
 </div>

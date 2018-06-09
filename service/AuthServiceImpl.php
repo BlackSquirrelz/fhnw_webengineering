@@ -8,10 +8,8 @@
 
 namespace service;
 
-use domain\Project;
 use domain\User;
 use domain\AuthToken;
-use dao\ProjectDAO;
 use dao\UserDAO;
 use http\HTTPException;
 use http\HTTPStatusCode;
@@ -74,7 +72,6 @@ class AuthServiceImpl implements AuthService
 
     /**
      * @access public
-     * @param String username
      * @param String email
      * @param String password
      * @return boolean
@@ -83,7 +80,7 @@ class AuthServiceImpl implements AuthService
      * @ParamType password String
      * @ReturnType boolean
      */
-    public function verifyUser($username, $email, $password) {
+    public function verifyUser($email, $password) {
         $userDAO = new UserDAO();
         $user = $userDAO->findByEmail($email);
         if (isset($user)) {
@@ -102,7 +99,7 @@ class AuthServiceImpl implements AuthService
     /**
      * @access public
      * @return User
-     * @ReturnType Agent
+     * @ReturnType User
      * @throws HTTPException
      */
     public function readUser() {
