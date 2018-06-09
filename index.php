@@ -62,7 +62,7 @@ Router::route("POST", "/login", function () {
 
 Router::route("GET", "/logout", function () {
     AuthController::logout();
-    Router::redirect("/home");
+    Router::redirect("/");
 });
 
 // Additional Pages like who who we are, projects, features

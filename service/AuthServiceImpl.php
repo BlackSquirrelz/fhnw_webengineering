@@ -88,6 +88,8 @@ class AuthServiceImpl implements AuthService {
     public function verifyUser($username,$email, $password) {
         $userDAO = new UserDAO();
         $user = $userDAO->findByEmail($email);
+        var_dump($user);
+        $ufu =password_verify($password, $user->getPassword());
         if (isset($user)) {
             if (password_verify($password, $user->getPassword())) {
                 if (password_needs_rehash($user->getPassword(), PASSWORD_DEFAULT)) {

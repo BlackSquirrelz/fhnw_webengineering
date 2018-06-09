@@ -28,6 +28,8 @@ class AuthController
     }
     public static function login(){
         $authService = AuthServiceImpl::getInstance();
+        $test=$authService->verifyUser($_POST["username"],$_POST["email"],$_POST["password"]);
+        var_dump($test);
         if($authService->verifyUser($_POST["username"],$_POST["email"],$_POST["password"]))
         {
             session_regenerate_id(true);
