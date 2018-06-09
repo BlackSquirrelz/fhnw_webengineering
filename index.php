@@ -72,9 +72,6 @@ Router::route("GET", "/features", function () {
     UserController::featureView();
 });
 
-
-
-
 Router::route("POST", "/password/request", function () {
     UserPasswordResetController::resetEmail();
     Router::redirect("/login");
@@ -171,8 +168,6 @@ $authAPITokenFunction = function () {
     Router::errorHeader();
     return false;
 };
-
-
 
 Router::route_auth("HEAD", "/api/token", $authAPITokenFunction, function () {
     ServiceEndpoint::validateToken();

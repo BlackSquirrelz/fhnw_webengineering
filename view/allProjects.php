@@ -7,40 +7,8 @@
  */
 
 use view\TemplateView;
-
 ?>
-
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WE-Timecatcher</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600">
-    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
-    <link rel="stylesheet" href="assets/css/Navigation-with-Search.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-
-<body id="home-div">
-<nav class="navbar navbar-light navbar-expand-md">
-    <div class="container-fluid"><a class="navbar-brand" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/home"><img src="assets/img/timecatcher-icon.png" class="logo"></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-        <div
-            class="collapse navbar-collapse" id="navcol-1">
-            <ul class="nav navbar-nav">
-                <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/home">Home</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link active" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/allprojects">Projects</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/profile">Profile</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/settings">Settings</a></li>
-            </ul>
-            <form class="form-inline ml-auto">
-                <p><a class="btn btn-primary" role="button" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/home">Log out</a></p>
-            </form>
-        </div>
-    </div>
-</nav>
+<body>
 <h1 class="menu-heading">Projects</h1>
 <div class="card">
     <div class="card-header">
@@ -50,28 +18,23 @@ use view\TemplateView;
         </ul>
     </div>
     <div class="card-body">
-        <h4 class="card-title">All projects</h4><input type="search" placeholder="Search in projects...">
             <table class="table">
                 <thead>
                 <tr>
-                    <th>ID </th>
                     <th>Project Name </th>
                     <th>Project Description </th>
                     <th>Start Date </th>
                     <th>End Date </th>
-                    <th>User</th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php
                 foreach($this->projects as $project): /* @var \domain\Project $project */ ?>
                     <tr>
-                        <td><?php echo $project->getId(); ?> </td>
                         <td><?php echo TemplateView::noHTML($project->getName()); ?></td>
                         <td><?php echo TemplateView::noHTML($project->getDesc()); ?> </td>
                         <td><?php echo TemplateView::noHTML($project->getStartDate()); ?> </td>
                         <td><?php echo TemplateView::noHTML($project->getEndDate()); ?> </td>
-                        <td><?php echo TemplateView::noHTML($project->getUserId()); ?> </td>
                         <td>
                         <div class="btn-group btn-group-sm" role="group">
                             <a class="btn btn-default" role="button" href="project/edit?id=<?php echo $project->getId(); ?>"> <i class="fa fa-edit"></i></a>
@@ -106,4 +69,3 @@ use view\TemplateView;
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
-</html>
