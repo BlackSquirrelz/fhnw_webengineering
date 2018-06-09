@@ -48,6 +48,7 @@ class UserController
     }
 
     public static function allProjectsView(){
+
         echo (new TemplateView("allProjects.php"))->render();
     }
 

@@ -14,6 +14,7 @@ use service\AuthServiceImpl;
 class AuthController
 {
     public static function authenticate(){
+
         if (isset($_SESSION["userLogin"])) {
             if(AuthServiceImpl::getInstance()->validateToken($_SESSION["userLogin"]["token"])) {
                 return true;

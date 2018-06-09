@@ -62,7 +62,8 @@ use view\TemplateView;
                 </tr>
                 </thead>
                 <tbody>
-                <?php foreach($this->allprojects as $project): /* @var \domain\Project $project */ ?>
+                <?php
+                foreach($this->projects as $project): /* @var \domain\Project $project */ ?>
                     <tr>
                         <td><?php echo $project->getId(); ?> </td>
                         <td><?php echo TemplateView::noHTML($project->getName()); ?></td>

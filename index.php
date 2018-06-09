@@ -29,16 +29,16 @@ session_start();
 $authFunction = function () {
     if (AuthController::authenticate())
         return true;
-    Router::redirect("/login");
+    var_dump('shit');
+    //Router::redirect("/login");
     return false;
 };
 
-Router::route("GET", "/home", function () {
-    UserController::homeView();
-});
-
 Router::route("GET", "/profile", function () {
     UserController::profileView();
+});
+Router::route("GET", "/home", function () {
+    UserController::homeView();
 });
 
 
@@ -57,7 +57,7 @@ Router::route("POST", "/register", function () {
 
 Router::route("POST", "/login", function () {
     AuthController::login();
-    Router::redirect("/");
+    Router::redirect("/allprojects");
 });
 
 Router::route("GET", "/logout", function () {
@@ -77,10 +77,6 @@ Router::route("GET", "/features", function () {
 
 Router::route("GET", "/projects", function () {
     UserController::projectView();
-});
-
-Router::route("GET", "/allprojects", function () {
-    UserController::allProjectsView();
 });
 
 Router::route("GET", "/create", function () {
@@ -108,6 +104,10 @@ Router::route("POST", "/password/reset", function () {
 
 Router::route("GET", "/password/reset", function () {
     UserPasswordResetController::resetView();
+});
+
+Router::route_auth("GET", "/allprojects", $authFunction,function () {
+    ProjectController::readAll();
 });
 
 Router::route_auth("GET", "/", $authFunction, function () {
@@ -167,6 +167,8 @@ $authAPITokenFunction = function () {
     Router::errorHeader();
     return false;
 };
+
+
 
 Router::route_auth("HEAD", "/api/token", $authAPITokenFunction, function () {
     ServiceEndpoint::validateToken();
