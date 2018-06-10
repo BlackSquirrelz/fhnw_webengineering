@@ -28,7 +28,7 @@ class Config
         } else {
             if (isset($_ENV["DATABASE_URL"])) {
                 $dbopts = parse_url(getenv('DATABASE_URL'));
-                self::$config["pdo"]["dsn"] = "mysql" . ":host=" . $dbopts["host"] . ";port=" . $dbopts["port"] . "; dbname=" . ltrim($dbopts["path"], '/') . "; sslmode=require";
+                self::$config["pdo"]["dsn"] = "psql" . ":host=" . $dbopts["host"] . ";port=" . $dbopts["port"] . "; dbname=" . ltrim($dbopts["path"], '/') . "; sslmode=require";
                 self::$config["pdo"]["user"] = $dbopts["user"];
                 self::$config["pdo"]["password"] = $dbopts["pass"];
             } // This configuration is for the SENDGRID (EMAIL Client)

@@ -26,6 +26,8 @@ use http\HTTPStatusCode;
 
 session_start();
 
+var_dump(getenv('driver').getenv('host').getenv('user').getenv('password'));
+
 $authFunction = function () {
     if (AuthController::authenticate())
         return true;
