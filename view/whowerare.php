@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/css/Footer-Basic.css">
     <link rel="stylesheet" href="assets/css/Navigation-with-Search.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/team.css">
 </head>
 
 <body id="base-div">
