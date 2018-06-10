@@ -26,8 +26,6 @@ use http\HTTPStatusCode;
 
 session_start();
 
-var_dump($my_env_var=getenv('host'));
-
 $authFunction = function () {
     if (AuthController::authenticate())
         return true;
