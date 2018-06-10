@@ -45,9 +45,9 @@ isset($this->projectValidator) ? $projectValidator = $this->projectValidator : $
                 if(count($projects) <=3) {
                     //var_dump($projects[1]);
                 foreach($this->projects as $project): /* @var \domain\Project $project */ ?>
-                    <?php $startDate = $project->getStartDate();?>
-                    <?php $endDate = $project->getEndDate();
-                    $difference =  $endDate - $startDate;?>
+                    <?php $startDate = new DateTime($project->getStartDate());?>
+                    <?php $endDate = new DateTime($project->getEndDate());
+                    $difference =  date_diff(getdate(), $startDate);?>
                     <tr>
                         <td><?php echo TemplateView::noHTML($project->getName()); ?></td>
                         <td><?php echo TemplateView::noHTML($project->getDesc()); ?> </td>

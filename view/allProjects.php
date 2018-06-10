@@ -30,13 +30,13 @@ use view\TemplateView;
                 <tbody>
                 <?php
                 foreach($this->projects as $project): /* @var \domain\Project $project */ ?>
-                    <tr>
+                    <tr data-project='hsdfhsdjfds' id="project-<?php echo TemplateView::noHTML($project->getId()); ?>">
                         <td><?php echo TemplateView::noHTML($project->getName()); ?></td>
                         <td><?php echo TemplateView::noHTML($project->getDesc()); ?> </td>
                         <td><?php echo TemplateView::noHTML($project->getStartDate()); ?> </td>
                         <td><?php echo TemplateView::noHTML($project->getEndDate()); ?> </td>
                         <td><a class="btn btn-default" role="button" href="project/edit?id=<?php echo $project->getId(); ?>"> <i class="fa fa-edit"></i>Edit</a>
-                            <button class="btn btn-default" type="button" data-target="#confirm-modal" data-toggle="modal" data-href="project/delete?id=<?php echo $project->getId(); ?>">Delete<i class="glyphicon glyphicon-trash"></i></button>
+                            <button class="btn btn-default" type="button" data-project='<?php echo $project->getId(); ?>' data-target="#confirm-modal" data-toggle="modal" data-href="project/delete?id=<?php echo $project->getId(); ?>">Delete<i class="glyphicon glyphicon-trash"></i></button>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -57,12 +57,15 @@ use view\TemplateView;
                         <p>Do you want to delete a project?</p>
                     </div>
                     <div class="modal-footer">
-                        <button class="btn btn-default" type="button" data-dismiss="modal">No </button><a class="btn btn-primary" role="button" href="#">Remove project </a></div>
+                        <button class="btn btn-default" type="button" data-dismiss="modal">No </button><a id="removeButton" class="btn btn-primary" role="button" href="#">Remove project </a></div>
                 </div>
             </div>
         </div>
 </div>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+
 </body>
 
