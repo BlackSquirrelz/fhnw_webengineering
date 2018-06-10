@@ -30,7 +30,7 @@
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/pricing">Pricing</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/features">Features</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/whoweare">Whoweare</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/whoweare">Who we are</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/login">Log in</a></li>
                 </ul><a class="btn btn-primary" role="button" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/register">SIGN UP</a></div>
     </div>
@@ -44,19 +44,20 @@
         </div>
         <div class="row">
             <div class="col-md-4">
+                <h2></h2>
+            </div>
+            </div>
+            <div class="col-md-4">
                 <h2>TEAM</h2>
-                <p>Tobias Weisskopf</p>
                 <p>Fabian Witschi</p>
+                <p> <img src='assets/img/tobi.jpg' alt='photo of tobi' /></p>
+                <p>Tobias Weisskopf</p>
+                <p> <img src='assets/img/tobi.jpg' alt='photo of tobi' /></p>
                 <p>Roger Kuratle</p>
+                <p> <img src='assets/img/roger.jpg' alt='photo of tobi' /></p>
             </div>
             <div class="col-md-4">
-                <h2>Company</h2>
-                <p>Timecatcher is the most successful spin off from the FHNW in the last 10 years</p>
-            </div>
-            <div class="col-md-4">
-                <h2>Contact us</h2>
-                <p>info@timecatchers.ch</p>
-                <p>0041 00 000 00 00</p>
+                <h2></h2>
                 <p><a class="btn btn-primary" role="button" href="signup.html">Send EMail</a></p>
             </div>
         </div>
