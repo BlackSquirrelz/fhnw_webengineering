@@ -20,7 +20,7 @@ class UserController
     public static function editView(){
         $view = new TemplateView("userEdit.php");
         $view->user = AuthServiceImpl::getInstance()->readUser();
-        $view->pageTitle = "TimeCatcher";
+        $view->pageTitle = "WE-TimeCatcher";
         $view->pageHeading = "<strong>TimeCatcher | Update</strong> your account.";
         $view->pageSubmitText = "Update";
         $view->pageFormAction = "/user/edit";
@@ -67,6 +67,10 @@ class UserController
         echo (new TemplateView("settings.php"))->render();
     }
 
+    public static function loginView(){
+        echo (new TemplateView("userLogin.php"))->render();
+    }
+
     public static function update(){
         $view = new TemplateView("userEdit.php");
         $view->pageTitle = "TimeCatcher";
@@ -85,11 +89,11 @@ class UserController
         $user->setPassword($_POST["password"]);
         $userValidator = new userValidator($user);
         if($userValidator->isValid()){
-            if(AuthServiceImpl::getInstance()->edituser($user->getFirstName(),$user->getLastName(),$user->getUserName(), $user->getEmail(), $user->getPassword())){
+            if(AuthServiceImpl::getInstance()->edituser($user->getUserName(), $user->getFirstName(),$user->getLastName(), $user->getEmail(), $user->getPassword())){
                 return true;
-            }else{
+            }else {
                 $userValidator->setEmailError("Email already exists");
-                $userValidator->setUsernameError("This username is already taken");
+                //$userValidator->setUsernameError("This username is already taken");
             }
         }
         $user->setPassword("");
@@ -101,7 +105,5 @@ class UserController
         return false;
     }
 
-    public static function loginView(){
-        echo (new TemplateView("userLogin.php"))->render();
-    }
+
 }

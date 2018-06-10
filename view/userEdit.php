@@ -14,7 +14,7 @@ use domain\User;
 use validator\UserValidator;
 
 isset($this->user) ? $user = $this->user : $user = new User();
-isset($this->userValidator) ? $userValidator = $this->userValidator : $userValidator = new UserValidator()
+isset($this->userValidator) ? $userValidator = $this->userValidator : $userValidator = new UserValidator();
 ?>
 <!DOCTYPE html>
 <html>
@@ -55,13 +55,12 @@ isset($this->userValidator) ? $userValidator = $this->userValidator : $userValid
             <p class="help-block"><?php echo $userValidator->getPasswordError() ?></p>
         </div>
         <div class="form-group">
-            <button class="btn btn-primary btn-block" type="submit"><?php echo isset($this->pageSubmitText) ? $this->pageSubmitText : "Register"; ?></button>
+            <button class="btn btn-primary btn-block" type="submit"><?php echo isset($this->pageSubmitText) ? $this->pageSubmitText : "Register Now!"; ?></button>
         </div>
     </form>
 </div>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/script.js"></script>
 </body>
 
 </html>

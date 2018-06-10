@@ -5,6 +5,13 @@
  * Date: 6/2/18
  * Time: 16:02
  */
+
+use domain\User;
+use validator\UserValidator;
+use view\TemplateView;
+
+isset($this->user) ? $user = $this->user : $user = new User();
+isset($this->userValidator) ? $userValidator = $this->userValidator : $userValidator = new UserValidator()
 ?>
 
 <!DOCTYPE html>
@@ -40,6 +47,7 @@
     </div>
 </nav>
 <h1 class="menu-heading">Profile</h1>
+<h2 class="text-center"><strong>Hi, <?php echo var_dump($user). TemplateView::noHTML($user->getUserName()); ?> welcome to you profile!</strong></h2></div>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>

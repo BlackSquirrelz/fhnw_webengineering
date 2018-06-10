@@ -1,24 +1,32 @@
 <?php
 /**
  * Created by PhpStorm.
+ * User: andreas.martin
+ * Date: 08.10.2017
+ * Time: 14:39
+ */
+/**
+ * Updated by PhpStorm.
  * User: blacksquirrelz
- * Date: 4/1/18
- * Time: 15:21
+ * Date: 08.06.2018
+ * Time: 14:39
  */
 
 namespace service;
 
-use domain\Project;
+//use domain\Project;
 use domain\User;
 use domain\AuthToken;
-use dao\ProjectDAO;
 use dao\UserDAO;
+//use dao\ProjectDAO;
 use http\HTTPException;
 use http\HTTPStatusCode;
 use dao\AuthTokenDAO;
-
-class AuthServiceImpl implements AuthService
-{
+/**
+ * @access public
+ * @author andreas.martin updated by blacksquirrelz
+ */
+class AuthServiceImpl implements AuthService {
     /**
      * @AttributeType AuthServiceImpl
      */
@@ -27,7 +35,6 @@ class AuthServiceImpl implements AuthService
      * @AttributeType int
      */
     private $currentUserId;
-
     /**
      * @access public
      * @return AuthServiceImpl
@@ -40,17 +47,14 @@ class AuthServiceImpl implements AuthService
         }
         return self::$instance;
     }
-
     /**
      * @access protected
      */
     protected function __construct() { }
-
     /**
      * @access private
      */
     private function __clone() { }
-
     /**
      * @access public
      * @return boolean
@@ -61,7 +65,6 @@ class AuthServiceImpl implements AuthService
             return true;
         return false;
     }
-
     /**
      * @access public
      * @return int
@@ -71,19 +74,22 @@ class AuthServiceImpl implements AuthService
     {
         return $this->currentUserId;
     }
-
     /**
      * @access public
+     * @param String username
      * @param String email
      * @param String password
      * @return boolean
+     * @ParamType username String
      * @ParamType email String
      * @ParamType password String
      * @ReturnType boolean
      */
     public function verifyUser($username,$email, $password) {
         $userDAO = new UserDAO();
-        $user = $userDAO->findByEmail($email) && $userDAO->findByUsername($username);
+        $user = $userDAO->findByEmail($email);
+        var_dump($user);
+        $ufu =password_verify($password, $user->getPassword());
         if (isset($user)) {
             if (password_verify($password, $user->getPassword())) {
                 if (password_needs_rehash($user->getPassword(), PASSWORD_DEFAULT)) {
@@ -96,11 +102,10 @@ class AuthServiceImpl implements AuthService
         }
         return false;
     }
-
     /**
      * @access public
      * @return User
-     * @ReturnType Agent
+     * @ReturnType User
      * @throws HTTPException
      */
     public function readUser() {
@@ -110,23 +115,26 @@ class AuthServiceImpl implements AuthService
         }
         throw new HTTPException(HTTPStatusCode::HTTP_401_UNAUTHORIZED);
     }
-
     /**
      * @access public
-     * @param string name
+     * @param string username
+     * @param string first_name
+     * @param string last_name
      * @param String email
      * @param String password
      * @return boolean
-     * @ParamType name string
+     * @ParamType username string
+     * @ParamType first_name string
+     * @ParamType last_name string
      * @ParamType email String
      * @ParamType password String
      * @ReturnType boolean
      */
-    public function editUser($first_name,$last_name,$username, $email, $password) {
+    public function editUser($username, $first_name, $last_name, $email, $password) {
         $user = new User();
+        $user->setUserName($username);
         $user->setFirstName($first_name);
         $user->setLastName($last_name);
-        $user->setUserName($username);
         $user->setEmail($email);
         $user->setPassword(password_hash($password, PASSWORD_DEFAULT));
         $userDAO = new UserDAO();
@@ -147,7 +155,6 @@ class AuthServiceImpl implements AuthService
             return true;
         }
     }
-
     /**
      * @access public
      * @param String token
@@ -163,6 +170,9 @@ class AuthServiceImpl implements AuthService
             if(time()<=(new \DateTime($authToken->getExpiration()))->getTimestamp()){
                 if (hash_equals(hash('sha384', hex2bin($tokenArray[1])), $authToken->getValidator())) {
                     $this->currentUserId = $authToken->getUserId();
+                    if($authToken->getType()===self::RESET_TOKEN){
+                        $authTokenDAO->delete($authToken);
+                    }
                     return true;
                 }
             }
@@ -170,7 +180,6 @@ class AuthServiceImpl implements AuthService
         }
         return false;
     }
-
     /**
      * @access public
      * @param int type
@@ -179,6 +188,7 @@ class AuthServiceImpl implements AuthService
      * @ParamType type int
      * @ParamType email String
      * @ReturnType String
+     * @throws HTTPException
      *
      * https://paragonie.com/blog/2015/04/secure-authentication-php-with-long-term-persistence
      * https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Authentication
@@ -187,9 +197,18 @@ class AuthServiceImpl implements AuthService
     public function issueToken($type = self::USER_TOKEN, $email = null) {
         $token = new AuthToken();
         $token->setSelector(bin2hex(random_bytes(5)));
-        $token->setType(self::USER_TOKEN);
-        $token->setUserId($this->currentUserId);
-        $timestamp = (new \DateTime('now'))->modify('+30 days');
+        if($type===self::USER_TOKEN) {
+            $token->setType(self::USER_TOKEN);
+            $token->setUserId($this->currentUserId);
+            $timestamp = (new \DateTime('now'))->modify('+30 days');
+        }
+        elseif(isset($email)){
+            $token->setType(self::RESET_TOKEN);
+            $token->setUserId((new UserDAO())->findByEmail($email)->getId());
+            $timestamp = (new \DateTime('now'))->modify('+1 hour');
+        }else{
+            throw new HTTPException(HTTPStatusCode::HTTP_406_NOT_ACCEPTABLE, 'RESET_TOKEN without email');
+        }
         $token->setExpiration($timestamp->format("Y-m-d H:i:s"));
         $validator = random_bytes(20);
         $token->setValidator(hash('sha384', $validator));
@@ -197,5 +216,4 @@ class AuthServiceImpl implements AuthService
         $authTokenDAO->create($token);
         return $token->getSelector() .":". bin2hex($validator);
     }
-
 }

@@ -12,94 +12,97 @@ use domain\Project;
 
 ///TODO: fix this for the Project Domain
 
-class ProjectDAO extends BasicDAO
+class ProjectDAO extends BasicDAO {
 /**
 * @access public
-* @param Customer customer
-* @return Customer
-* @ParamType customer Customer
-* @ReturnType Customer
+* @param Project project
+* @return Project
+* @ParamType project Project
+* @ReturnType Project
 */
     public function create(Project $project) {
         $stmt = $this->pdoInstance->prepare('
-            INSERT INTO project (project_name, project_desc, p_startdate, p_enddate, p_admin, p_owner)
-            VALUES (:p_name, :p_desc , :p_start, :p_end, :p_admin, :p_owner)');
+            INSERT INTO project (project_name, project_desc, p_startdate, p_enddate, P_USERS _ID, p_admin, p_owner)
+            VALUES (:p_name, :p_desc , :p_start, :p_end, :p_admin, :p_owner);');
+
         $stmt->bindValue(':p_name', $project->getName());
-        $stmt->bindValue(':p_desc', $project->getName());
-        $stmt->bindValue(':p_start', $project->getName());
-        $stmt->bindValue(':p_end', $project->getName());
-        $stmt->bindValue(':p_admin', $project->getName());
-        $stmt->bindValue(':p_owner', $project->getName());
+        $stmt->bindValue(':p_desc', $project->getDesc());
+        $stmt->bindValue(':p_start', $project->getStartDate());
+        $stmt->bindValue(':p_end', $project->getEndDate());
+        $stmt->bindValue(':p_admin', $project->getUserId());
+        $stmt->bindValue(':p_owner', $project->getUserId());
         $stmt->execute();
         return $this->read($this->pdoInstance->lastInsertId());
     }
 
     /**
      * @access public
-     * @param int customerId
-     * @return Customer
-     * @ParamType customerId int
-     * @ReturnType Customer
+     * @param int projectId
+     * @return Project
+     * @ParamType projectId int
+     * @ReturnType Project
      */
-    public function read($customerId) {
+    public function read($projectId) {
         $stmt = $this->pdoInstance->prepare('
-            SELECT * FROM customer WHERE id = :id;');
-        $stmt->bindValue(':id', $customerId);
+            SELECT * FROM project WHERE id = :id;');
+        $stmt->bindValue(':id', $projectId);
         $stmt->execute();
         if ($stmt->rowCount() > 0) {
-            return $stmt->fetchAll(\PDO::FETCH_CLASS, "domain\Customer")[0];
+            return $stmt->fetchAll(\PDO::FETCH_CLASS, "domain\Project")[0];
         }
         return null;
     }
 
     /**
      * @access public
-     * @param Customer customer
-     * @return Customer
-     * @ParamType customer Customer
-     * @ReturnType Customer
+     * @param Project project
+     * @return Project
+     * @ParamType project Project
+     * @ReturnType Project
      */
-    public function update(Customer $customer) {
+    public function update(Project $project) {
         $stmt = $this->pdoInstance->prepare('
-            UPDATE customer SET name = :name,
-                email = :email,
-                mobile = :mobile
+            UPDATE project SET project_name = :project_name,
+                project_desc = :project_desc,
+                p_startdate = :p_start,
+                p_enddate = :p_end
             WHERE id = :id');
-        $stmt->bindValue(':name', $customer->getName());
-        $stmt->bindValue(':email', $customer->getEmail());
-        $stmt->bindValue(':mobile', $customer->getMobile());
-        $stmt->bindValue(':id', $customer->getId());
+        $stmt->bindValue(':project_name', $project->getName());
+        $stmt->bindValue(':project_desc', $project->getDesc());
+        $stmt->bindValue(':p_start', $project->getStartDate());
+        $stmt->bindValue(':p_end', $project->getEndDate());
+        $stmt->bindValue(':id', $project->getId());
         $stmt->execute();
-        return $this->read($customer->getId());
+        return $this->read($project->getId());
     }
 
     /**
      * @access public
-     * @param Customer customer
-     * @ParamType customer Customer
+     * @param Project project
+     * @ParamType project Project
      */
-    public function delete(Customer $customer) {
+    public function delete(Project $project) {
         $stmt = $this->pdoInstance->prepare('
-            DELETE FROM customer
+            DELETE FROM project
             WHERE id = :id
         ');
-        $stmt->bindValue(':id', $customer->getId());
+        $stmt->bindValue(':id', $project->getId());
         $stmt->execute();
     }
 
     /**
      * @access public
-     * @param int agentId
-     * @return Customer[]
-     * @ParamType agentId int
-     * @ReturnType Customer[]
+     * @param int projectId
+     * @return Project[]
+     * @ParamType userId int
+     * @ReturnType Project[]
      */
-    public function findByAgent($agentId) {
+    public function findByUser($userId) {
         $stmt = $this->pdoInstance->prepare('
-            SELECT * FROM customer WHERE agentid = :agentId ORDER BY id;');
-        $stmt->bindValue(':agentId', $agentId);
+            SELECT * FROM project WHERE userid = :userId ORDER BY id');
+        $stmt->bindValue(':userId', $userId);
         $stmt->execute();
-        return $stmt->fetchAll(\PDO::FETCH_CLASS, "domain\Customer");
+        return $stmt->fetchAll(\PDO::FETCH_CLASS, "domain\Project");
     }
 }
 ?>

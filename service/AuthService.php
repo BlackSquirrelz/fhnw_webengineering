@@ -23,9 +23,11 @@ interface AuthService {
 
     /**
      * @access public
+     * @param String username
      * @param String email
      * @param String password
      * @return boolean
+     * @ParamType username String
      * @ParamType email String
      * @ParamType password String
      * @ReturnType boolean

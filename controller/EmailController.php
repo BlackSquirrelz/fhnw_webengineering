@@ -9,15 +9,15 @@
 namespace controller;
 
 use service\AuthServiceImpl;
-use service\CustomerServiceImpl;
+use service\ProjectServiceImpl;
 use view\TemplateView;
 use service\EmailServiceClient;
 
 class EmailController
 {
-    public static function sendMeMyCustomers(){
-        $emailView = new TemplateView("customerListEmail.php");
-        $emailView->customers = (new CustomerServiceImpl())->findAllCustomer();
-        return EmailServiceClient::sendEmail(AuthServiceImpl::getInstance()->readAgent()->getEmail(), "My current customers", $emailView->render());
+    public static function sendMeMyProjects(){
+        $emailView = new TemplateView("projectListEmail.php");
+        $emailView->projects = (new ProjectServiceImpl())->findAllProjects();
+        return EmailServiceClient::sendEmail(AuthServiceImpl::getInstance()->readUser()->getEmail(), "My current projects", $emailView->render());
     }
 }

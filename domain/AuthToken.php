@@ -8,7 +8,10 @@
 
 namespace domain;
 
-
+/**
+ * @access public
+ * @author blacksquirrelz
+ */
 class AuthToken
 {
     /**
@@ -31,7 +34,7 @@ class AuthToken
      * @AssociationType int
      * @AssociationMultiplicity 1
      */
-    private $agentid;
+    private $user_id;
     /**
      * @AttributeType int
      */
