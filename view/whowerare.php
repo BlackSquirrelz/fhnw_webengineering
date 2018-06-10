@@ -57,7 +57,7 @@
 
             <div class="column">
                 <div class="card">
-                    <img src="assets\img\tobi.jpg" alt="tobi" style="width:100%">
+                    <img src="assets\img\fabian.jpg" alt="fabian" style="width:100%">
                     <div class="container">
                         <h2>Fabian Witschi</h2>
                         <p class="title">Art Director</p>
