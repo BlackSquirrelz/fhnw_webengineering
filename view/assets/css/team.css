@@ -6,9 +6,7 @@
     padding: 0 8px;
 }
 
-body h2 {
-    color: black;
-}
+
 
 /* Display the columns below each other instead of side by side on small screens */
 @media screen and (max-width: 650px) {
@@ -16,6 +14,10 @@ body h2 {
         width: 100%;
         display: block;
     }
+}
+
+body h2 {
+    color: black
 }
 
 /* Add some shadows to create a card effect */
