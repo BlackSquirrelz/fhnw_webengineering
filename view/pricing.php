@@ -16,12 +16,14 @@ include 'landingheader.php';
             <div class="col-md-12">
                 <h1 id="pricing-heading">Pricing</h1>
                 <h2>Free Version</h2>
-                <p2>WE-CRM is a completly free Online Project tool.</p2>
+                <p2>Timecatcher is a completly free Online Projectmanagement tool.</p2>
                 <p></p>
+                <h6>Come aboard and catch some time with timecatcher</h6>
                 <li>Unlimited useage during Betaphase</li>
                 <li>Submit now and register for live-long free version exclusivly for BetaUsers.</li>
                 <li>In 2019 we will launch are Full Version starting from 10 $ / user / month</li>
-                <p><a class="btn btn-primary" role="button" href="signup.html">SIGN UP</a></p>
+                <p></p>
+                <p><a class="btn btn-primary" role="button" href="register">REGISTER FOR FREE</a></p>
             </div>
         </div>
     </div>

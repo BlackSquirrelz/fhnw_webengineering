@@ -21,6 +21,7 @@ isset($this->userValidator) ? $userValidator = $this->userValidator : $userValid
 <div id="signup-div" style="height:100%;">
     <div class="page-header">
     <form id="signup-form" action="<?php echo $GLOBALS["ROOT_URL"]; ?><?php echo isset($this->pageFormAction) ? $this->pageFormAction : "/register"; ?>" method="post">
+        <h1>Sign Up</h1>
         <div class="form-group <?php echo $userValidator->isUsernameError() ? "has-error" : ""; ?>">
             <input class="form-control" type="text" name="username" placeholder="User Name" value="<?php echo $user->getUserName() ?>">
             <p class="help-block"><?php echo $userValidator->getUsernameError() ?></p>

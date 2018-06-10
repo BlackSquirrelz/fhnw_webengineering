@@ -11,7 +11,7 @@ include 'landingheader.php';
 ?>
     <div id="login-div">
         <form id="login-form" action="<?php echo $GLOBALS["ROOT_URL"]; ?>/login" method="post">
-            <h2>Log In</h2>
+            <h1>Log In</h1>
             <div class="form-group">
                 <input class="form-control" type="username" name="username" placeholder="Username">
             </div>
