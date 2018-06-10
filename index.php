@@ -123,6 +123,11 @@ Router::route_auth("POST", "/user/edit", $authFunction, function () {
         Router::redirect("/logout");
 });
 
+Router::route_auth("POST", "/profile/update", $authFunction, function () {
+    if(UserController::update())
+        Router::redirect("/");
+});
+
 Router::route_auth("GET", "/project/create", $authFunction, function () {
     if(ProjectController::create())
         Router::redirect("/allprojects");
@@ -133,7 +138,6 @@ Router::route_auth("GET", "/project/edit", $authFunction, function () {
 });
 
 Router::route_auth("GET", "/project/delete", $authFunction, function () {
-    var_dump("this will call the delete function");
     ProjectController::delete();
     Router::redirect("/");
 });
