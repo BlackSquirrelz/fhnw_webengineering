@@ -53,12 +53,12 @@
 
             <div class="column">
                 <div class="card">
-                    <img src="img2.jpg" alt="Mike" style="width:100%">
+                    <img src="assets\img\tobi.jpg" alt="tobi" style="width:100%">
                     <div class="container">
                         <h2>Fabian Witschi</h2>
                         <p class="title">Art Director</p>
-                        <p></p>
-                        <p>example@example.com</p>
+                        <p>The artist.</p>
+                        <p>fabian@we-crm.com</p>
                         <p><button class="button">Contact</button></p>
                     </div>
                 </div>
@@ -66,12 +66,12 @@
 
             <div class="column">
                 <div class="card">
-                    <img src="img3.jpg" alt="John" style="width:100%">
+                    <img src="assets\img\roger.jpg" alt="roger" style="width:100%">
                     <div class="container">
-                        <h2>John Doe</h2>
-                        <p class="title">Designer</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                        <p>example@example.com</p>
+                        <h2>Roger Kuratle</h2>
+                        <p class="title">Head of content</p>
+                        <p>The content.</p>
+                        <p>roger@we-crm.com</p>
                         <p><button class="button">Contact</button></p>
                     </div>
                 </div>
@@ -83,4 +83,6 @@
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
+
 </html>
+
