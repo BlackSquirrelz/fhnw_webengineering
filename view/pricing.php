@@ -16,7 +16,8 @@ include 'landingheader.php';
             <div class="col-md-12">
                 <h1 id="pricing-heading">Pricing</h1>
                 <h2>Free Version</h2>
-                <p>WE-CRM is a completly free Online Project tool.</p>
+                <p2>WE-CRM is a completly free Online Project tool.</p2>
+                <p></p>
                 <li>Unlimited useage during Betaphase</li>
                 <li>Submit now and register for live-long free version exclusivly for BetaUsers.</li>
                 <li>In 2019 we will launch are Full Version starting from 10 $ / user / month</li>
