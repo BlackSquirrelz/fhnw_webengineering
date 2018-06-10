@@ -38,27 +38,43 @@
 <div id="pricing-block">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <h1 id="pricing-heading">Who we are</h1>
+            <div class="column">
+                <div class="card">
+                    <img src="assets\img\tobi.jpg" alt="tobi" style="width:100%">
+                    <div class="container">
+                        <h2>Tobias Weisskopf</h2>
+                        <p class="title">CEO &amp; Founder</p>
+                        <p>The brain.</p>
+                        <p>tobias@we-crm.com</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <h2></h2>
+
+            <div class="column">
+                <div class="card">
+                    <img src="img2.jpg" alt="Mike" style="width:100%">
+                    <div class="container">
+                        <h2>Fabian Witschi</h2>
+                        <p class="title">Art Director</p>
+                        <p></p>
+                        <p>example@example.com</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
             </div>
-            </div>
-            <div class="col-md-4">
-                <h2>TEAM</h2>
-                <p>Fabian Witschi</p>
-                <p> <img src='assets/img/tobi.jpg' alt='photo of tobi' /></p>
-                <p>Tobias Weisskopf</p>
-                <p> <img src='assets/img/tobi.jpg' alt='photo of tobi' /></p>
-                <p>Roger Kuratle</p>
-                <p> <img src='assets/img/roger.jpg' alt='photo of tobi' /></p>
-            </div>
-            <div class="col-md-4">
-                <h2></h2>
-                <p><a class="btn btn-primary" role="button" href="signup.html">Send EMail</a></p>
+
+            <div class="column">
+                <div class="card">
+                    <img src="img3.jpg" alt="John" style="width:100%">
+                    <div class="container">
+                        <h2>John Doe</h2>
+                        <p class="title">Designer</p>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>example@example.com</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
