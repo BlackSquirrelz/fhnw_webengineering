@@ -15,6 +15,7 @@ class Config
 
     public static function init()
     {
+
         if (file_exists(self::$iniFile)) {
             $data = parse_ini_file(self::$iniFile, true);
             $databaseConfig = $data["database"];
