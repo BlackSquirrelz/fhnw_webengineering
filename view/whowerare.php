@@ -53,7 +53,7 @@
         <div class="row">
             <div class="column">
                 <div class="card">
-                    <img src="assets\img\tobi.jpg" alt="tobi" style="width:100%">
+                    <img src="assets\img\tobias.jpg" alt="tobias" style="width:100%">
                     <div class="container">
                         <h2>Tobias Weisskopf</h2>
                         <p class="title">CEO &amp; Founder</p>
@@ -69,7 +69,7 @@
 
             <div class="column">
                 <div class="card">
-                    <img src="assets\img\fabian.jpg" alt="fabian" style="width:100%">
+                    <img src="assets\img\fabian2.jpg" alt="fabian2" style="width:100%">
                     <div class="container">
                         <h2>Fabian Witschi</h2>
                         <p class="title">Art Director</p>
@@ -85,7 +85,7 @@
 
             <div class="column">
                 <div class="card">
-                    <img src="assets\img\roger.jpg" alt="roger" style="width:100%">
+                    <img src="assets\img\roger2.jpg" alt="roger2" style="width:100%">
                     <div class="container">
                         <h2>Roger Kuratle</h2>
                         <p class="title">Head of content</p>

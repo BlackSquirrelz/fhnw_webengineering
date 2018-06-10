@@ -7,7 +7,6 @@ Project for Webengineering course @FHNW
 <h4>Team:</h4>
 - Fabian W. 
 - Roger K.
-- Sameer D.
 - Tobias W.
 
 <b>DEADLINE: 11 June 2018</b><br>
@@ -108,6 +107,11 @@ Functions:
     - Admin page (Roger)
 
 <h3>02/04/2018 -  Database setup and EDR</h3>
+
+<h3>30/05/2018 -  Create views
+
+
+
 
 
 
