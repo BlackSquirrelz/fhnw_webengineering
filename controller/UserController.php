@@ -12,6 +12,7 @@ use service\AuthServiceImpl;
 use validator\UserValidator;
 use view\TemplateView;
 use domain\User;
+use view\LayoutRendering;
 
 
 
