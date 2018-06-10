@@ -35,11 +35,8 @@ use view\TemplateView;
                         <td><?php echo TemplateView::noHTML($project->getDesc()); ?> </td>
                         <td><?php echo TemplateView::noHTML($project->getStartDate()); ?> </td>
                         <td><?php echo TemplateView::noHTML($project->getEndDate()); ?> </td>
-                        <td>
-                        <div class="btn-group btn-group-sm" role="group">
-                            <a class="btn btn-default" role="button" href="project/edit?id=<?php echo $project->getId(); ?>"> <i class="fa fa-edit"></i></a>
-                            <button class="btn btn-default" type="button" data-target="#confirm-modal" data-toggle="modal" data-href="project/delete?id=<?php echo $project->getId(); ?>"> <i class="glyphicon glyphicon-trash"></i></button>
-                        </div>
+                        <td><a class="btn btn-default" role="button" href="project/edit?id=<?php echo $project->getId(); ?>"> <i class="fa fa-edit"></i>Edit</a>
+                            <button class="btn btn-default" type="button" data-target="#confirm-modal" data-toggle="modal" data-href="project/delete?id=<?php echo $project->getId(); ?>">Delete<i class="glyphicon glyphicon-trash"></i></button>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -55,12 +52,12 @@ use view\TemplateView;
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                        <h4 class="modal-title">Deletion of a <strong>customer</strong>.</h4></div>
+                        <h4 class="modal-title">Delete project.</h4></div>
                     <div class="modal-body">
-                        <p>Are you sure you want to delete this project?</p>
+                        <p>Do you want to delete a project?</p>
                     </div>
                     <div class="modal-footer">
-                        <button class="btn btn-default" type="button" data-dismiss="modal">NO! </button><a class="btn btn-primary" role="button" href="#">Sure Go Ahead! </a></div>
+                        <button class="btn btn-default" type="button" data-dismiss="modal">No </button><a class="btn btn-primary" role="button" href="#">Remove project </a></div>
                 </div>
             </div>
         </div>

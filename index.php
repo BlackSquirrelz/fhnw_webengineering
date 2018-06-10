@@ -133,6 +133,7 @@ Router::route_auth("GET", "/project/edit", $authFunction, function () {
 });
 
 Router::route_auth("GET", "/project/delete", $authFunction, function () {
+    var_dump("this will call the delete function");
     ProjectController::delete();
     Router::redirect("/");
 });

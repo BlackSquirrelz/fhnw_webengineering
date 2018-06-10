@@ -27,8 +27,8 @@ class ProjectController
     }
     public static function edit(){
         $id = $_GET["id"];
-        $contentView = new TemplateView("projectCreate.php");
-        $contentView->project = (new ProjectServiceImpl())->readProject($id);
+        $contentView = new TemplateView("projectEdit.php");
+        $contentView->projects = (new ProjectServiceImpl())->readProject($id);
         LayoutRendering::basicLayout($contentView);
     }
     public static function update(){
@@ -38,9 +38,6 @@ class ProjectController
         $project->setDesc($_POST["project_desc"]);
         $project->setStartDate($_POST["p_startdate"]);
         $project->setEndDate($_POST["p_enddate"]);
-        $project->setUserId($_POST["p_users_id"]);
-        $project->setUserId($_POST["p_admin"]);
-        $project->setUserId($_POST["p_owner"]);
         $projectValidator = new ProjectValidator($project);
         if($projectValidator->isValid()) {
             if ($project->getId() === "") {
@@ -51,7 +48,7 @@ class ProjectController
         }
         else{
             $contentView = new TemplateView("projectCreate.php");
-            $contentView->project = $project;
+            $contentView->projects = $project;
             $contentView->projectValidator  = $projectValidator;
             LayoutRendering::basicLayout($contentView);
             return false;

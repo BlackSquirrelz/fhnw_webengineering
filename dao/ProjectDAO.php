@@ -62,19 +62,15 @@ class ProjectDAO extends BasicDAO {
      */
     public function update(Project $project) {
         $stmt = $this->pdoInstance->prepare('
-            UPDATE project SET name = :name,
+            UPDATE project SET project_name = :project_name,
                 project_desc = :project_desc,
                 p_startdate = :p_start,
-                p_enddate = :p_end,
-                p_admin = :p_admin,
-                p_owner = :p_owner
+                p_enddate = :p_end
             WHERE id = :id');
-        $stmt->bindValue(':name', $project->getName());
+        $stmt->bindValue(':project_name', $project->getName());
         $stmt->bindValue(':project_desc', $project->getDesc());
         $stmt->bindValue(':p_start', $project->getStartDate());
         $stmt->bindValue(':p_end', $project->getEndDate());
-        $stmt->bindValue(':p_admin', $project->getUserId());
-        $stmt->bindValue(':p_owner', $project->getUserId());
         $stmt->bindValue(':id', $project->getId());
         $stmt->execute();
         return $this->read($project->getId());

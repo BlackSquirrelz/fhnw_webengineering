@@ -42,7 +42,7 @@
     </div>
 
 </nav>
-<h1 class="text-center" id="home-nameheading">Welcome [Name]</h1>
+<h1 class="text-center" id="home-nameheading">Welcome</h1>
 <div id="home-block">
     <div class="container">
         <div class="row">
