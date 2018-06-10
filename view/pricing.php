@@ -43,9 +43,9 @@
                 <h1 id="pricing-heading">Pricing</h1>
                 <h2>Free Version</h2>
                 <p>WE-CRM is a completly free Online Project tool.</p>
-                <p>Unlimited useage during Betaphase</p>
-                <p>Submit now and register for live-long free version exclusivly for BetaUsers.</p>
-                <p>In 2019 we will launch are Full Version starting from 10$ / User / month</p>
+                <li>Unlimited useage during Betaphase</li>
+                <li>Submit now and register for live-long free version exclusivly for BetaUsers.</li>
+                <li>In 2019 we will launch are Full Version starting from 10 $ / user / month</li>
                 <p><a class="btn btn-primary" role="button" href="signup.html">SIGN UP</a></p>
             </div>
         </div>
