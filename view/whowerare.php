@@ -46,7 +46,10 @@
                         <p class="title">CEO &amp; Founder</p>
                         <p>The brain.</p>
                         <p>tobias@we-crm.com</p>
-                        <p><button class="button">Contact</button></p>
+                        <a href="mailto:tobias@we-crm.com?subject=Contact request for WE-CRM
+                        &body=Hi Tobias, Please contant me about WE-CRM">
+                            <button id="btnOutlook">Send Email to Tobi</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -59,7 +62,10 @@
                         <p class="title">Art Director</p>
                         <p>The artist.</p>
                         <p>fabian@we-crm.com</p>
-                        <p><button class="button">Contact</button></p>
+                        <a href="mailto:fabian@we-crm.com?subject=Contact request for WE-CRM
+                        &body=Hi Fabian, Please contant me about WE-CRM">
+                            <button id="btnOutlook">Send Email to Fabian</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -72,7 +78,10 @@
                         <p class="title">Head of content</p>
                         <p>The content.</p>
                         <p>roger@we-crm.com</p>
-                        <p><button class="button">Contact</button></p>
+                        <a href="mailto:roger@we-crm.com?subject=Contact request for WE-CRM
+                        &body=Hi Roger, Please contant me about WE-CRM">
+                            <button id="btnOutlook">Send Email to Roger</button>
+                        </a>
                     </div>
                 </div>
             </div>
