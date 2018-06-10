@@ -24,6 +24,7 @@ class Config
             self::$config["pdf"]["hypdf-user"] = $data["pdf"]["hypdf-user"];
             self::$config["pdf"]["hypdf-password"] = $data["pdf"]["hypdf-password"];
         } else {
+            var_dump($_ENV["CLEARDB_DATABASE_URL"]);
             if (isset($_ENV["CLEARDB_DATABASE_URL"])) {
                 $dbopts = parse_url(getenv('CLEARDB_DATABASE_URL'));
                 self::$config["pdo"]["dsn"] = "mysql" . ":host=" . $dbopts["host"] . ";port=" . $dbopts["port"] . "; dbname=" . ltrim($dbopts["path"], '/') . "; sslmode=require";
