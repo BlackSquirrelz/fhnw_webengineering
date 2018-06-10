@@ -71,6 +71,9 @@ Router::route("GET", "/whoweare", function () {
 Router::route("GET", "/features", function () {
     UserController::featureView();
 });
+Router::route("GET", "/pricing", function () {
+    UserController::pricingView();
+});
 
 Router::route("POST", "/password/request", function () {
     UserPasswordResetController::resetEmail();

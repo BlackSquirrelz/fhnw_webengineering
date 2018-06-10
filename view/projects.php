@@ -53,7 +53,7 @@ isset($this->projectValidator) ? $projectValidator = $this->projectValidator : $
                         <td><?php echo TemplateView::noHTML($project->getDesc()); ?> </td>
                         <td><?php echo TemplateView::noHTML($project->getStartDate()); ?> </td>
                         <td><?php echo TemplateView::noHTML($project->getEndDate()); ?> </td>
-                        <td><?php echo $project->getStartDate() - $project->getEndDate();?></td>
+                        <td><?php echo $difference;?></td>
                     </tr>
                 <?php endforeach;?>
                 <?php
