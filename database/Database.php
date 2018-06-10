@@ -14,9 +14,8 @@ class Database
     protected function __construct()
     {
         try{
-            $test = self::$pdoInstance = new PDO (Config::pdoConfig("dsn"), Config::pdoConfig("user"), Config::pdoConfig("password"));
-            var_dump($test);
-            $test2 =self::$pdoInstance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            self::$pdoInstance = new PDO ("mysql://eu-cdbr-west-02.cleardb.net:3306/heroku_5b4a2ef607eb671", Config::pdoConfig("user"), Config::pdoConfig("password"));
+            self::$pdoInstance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $exception) {
             echo "Connection failed " . $exception->getMessage();
         }

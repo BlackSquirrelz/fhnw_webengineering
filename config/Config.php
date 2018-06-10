@@ -26,10 +26,10 @@ class Config
         } else {
             //var_dump($_ENV["CLEARDB_DATABASE_URL"]);
             if (isset($_ENV["CLEARDB_DATABASE_URL"])) {
-                $dbopts = parse_url(getenv('CLEARDB_DATABASE_URL'));
-                self::$config["pdo"]["dsn"] = "mysql" . ":host=" . $dbopts["host"] . ";port=" . 3306 . "; dbname=" . ltrim($dbopts["path"], '/') . "; sslmode=require";
-                self::$config["pdo"]["user"] = $dbopts["user"];
-                self::$config["pdo"]["password"] = $dbopts["pass"];
+                //$dbopts = parse_url(getenv('CLEARDB_DATABASE_URL'));
+                //self::$config["pdo"]["dsn"] = "mysql" . ":host=" . $dbopts["host"] . ";port=" . 3306 . "; dbname=" . ltrim($dbopts["path"], '/') . "; sslmode=require";
+                self::$config["pdo"]["user"] = getenv('user');
+                self::$config["pdo"]["password"] = getenv('password');
                 //var_dump($URL, $User, $password);
             }
             if (isset($_ENV["SENDGRID_APIKEY"])) {
