@@ -26,10 +26,14 @@ class Config
         } else {
             var_dump($_ENV["CLEARDB_DATABASE_URL"]);
             if (isset($_ENV["CLEARDB_DATABASE_URL"])) {
-                $dbopts = parse_url(getenv('CLEARDB_DATABASE_URL'));
+                /**$dbopts = parse_url(getenv('CLEARDB_DATABASE_URL'));
                 self::$config["pdo"]["dsn"] = "mysql" . ":host=" . $dbopts["host"] . ";port=" . $dbopts["port"] . "; dbname=" . ltrim($dbopts["path"], '/') . "; sslmode=require";
                 self::$config["pdo"]["user"] = $dbopts["user"];
-                self::$config["pdo"]["password"] = $dbopts["pass"];
+                self::$config["pdo"]["password"] = $dbopts["pass"];*/
+                $dbopts = parse_url(getenv('CLEARDB_DATABASE_URL'));
+                self::$config["pdo"]["dsn"] = "mysql" . ":host=" . getenv('host') . ";port=" . getenv('port'). "; dbname=" . getenv('password'), . '/') . "; sslmode=require";
+                self::$config["pdo"]["user"] = getenv('user');
+                self::$config["pdo"]["password"] = getenv('password');
             }
             if (isset($_ENV["SENDGRID_APIKEY"])) {
                 self::$config["email"]["sendgrid-apikey"] = getenv('SENDGRID_APIKEY');
