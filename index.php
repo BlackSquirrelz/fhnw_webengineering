@@ -106,10 +106,6 @@ Router::route_auth("GET", "/create",$authFunction, function () {
     UserController::createProjectView();
 });
 
-Router::route_auth("GET", "/settings",$authFunction, function () {
-    UserController::settingsView();
-});
-
 Router::route_auth("GET", "/allprojects", $authFunction,function () {
     ProjectController::readAll();
 });
