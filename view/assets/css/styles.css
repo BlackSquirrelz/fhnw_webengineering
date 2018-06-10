@@ -66,15 +66,25 @@ h1, h2, h3, h4 {
 
 }
 
+body li {
+  color: black;
+}
+
 body h1, h2, h3, h4 {
   color: black;
 }
 
 body h5 {
-
   font-size: 20px;
   color: red;
+}
 
+body p3 {
+  color: black;
+}
+
+body p2 {
+  color: red;
 }
 
 #login-div {
