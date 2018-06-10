@@ -9,6 +9,7 @@
 * Code adapted from Reference Project to fit the requirements of TimeCatcher
  */
 
+include 'landingheader.php';
 
 use domain\User;
 use validator\UserValidator;
@@ -16,24 +17,10 @@ use validator\UserValidator;
 isset($this->user) ? $user = $this->user : $user = new User();
 isset($this->userValidator) ? $userValidator = $this->userValidator : $userValidator = new UserValidator();
 ?>
-<!DOCTYPE html>
-<html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo isset($this->pageTitle) ? $this->pageTitle : "WE-Timecatcher"; ?></title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-
-<body>
-<div class="container" style="display:flex;flex-direction:column;justify-content:center;">
+<div id="signup-div" style="height:100%;">
     <div class="page-header">
-        <h2 class="text-center"><?php echo isset($this->pageHeading) ? $this->pageHeading : "<strong>WE-Timecatcher</strong> your account. "; ?></h2></div>
-    <form action="<?php echo $GLOBALS["ROOT_URL"]; ?><?php echo isset($this->pageFormAction) ? $this->pageFormAction : "/register"; ?>" method="post">
+    <form id="signup-form" action="<?php echo $GLOBALS["ROOT_URL"]; ?><?php echo isset($this->pageFormAction) ? $this->pageFormAction : "/register"; ?>" method="post">
         <div class="form-group <?php echo $userValidator->isUsernameError() ? "has-error" : ""; ?>">
             <input class="form-control" type="text" name="username" placeholder="User Name" value="<?php echo $user->getUserName() ?>">
             <p class="help-block"><?php echo $userValidator->getUsernameError() ?></p>
@@ -59,8 +46,5 @@ isset($this->userValidator) ? $userValidator = $this->userValidator : $userValid
         </div>
     </form>
 </div>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-</body>
 
-</html>
+<?php include 'landingfooter.php' ; ?>

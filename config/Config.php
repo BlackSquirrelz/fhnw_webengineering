@@ -10,11 +10,12 @@ namespace config;
 
 class Config
 {
-    protected static $iniFile = "config/config.env";
+    protected static $iniFile = "config/settings.php";
     protected static $config = [];
 
     public static function init()
     {
+
         if (file_exists(self::$iniFile)) {
             $data = parse_ini_file(self::$iniFile, true);
             $databaseConfig = $data["database"];
@@ -27,9 +28,9 @@ class Config
         } else {
             if (isset($_ENV["DATABASE_URL"])) {
                 $dbopts = parse_url(getenv('DATABASE_URL'));
-                self::$config["pdo"]["dsn"] = "pgsql" . ":host=" . $dbopts["host"] . ";port=" . $dbopts["port"] . "; dbname=" . ltrim($dbopts["path"], '/') . "; sslmode=require";
-                self::$config["pdo"]["user"] = $dbopts["user"];
-                self::$config["pdo"]["password"] = $dbopts["pass"];
+                self::$config["pdo"]["dsn"] = "mysql" . ":host=" . getenv('host') . ";port=" . getenv('port') . "; dbname=" . ltrim($dbopts["path"], '/') . "; sslmode=require";
+                self::$config["pdo"]["user"] = getenv('user');
+                self::$config["pdo"]["password"] = getenv('password');
             } // This configuration is for the SENDGRID (EMAIL Client)
             if (isset($_ENV["SENDGRID_APIKEY"])) {
                 self::$config["email"]["sendgrid-apikey"] = getenv('SENDGRID_APIKEY');

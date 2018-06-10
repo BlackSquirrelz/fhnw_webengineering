@@ -26,6 +26,8 @@ use http\HTTPStatusCode;
 
 session_start();
 
+//var_dump(getenv('driver').getenv('host').getenv('user').getenv('password'));
+
 $authFunction = function () {
     if (AuthController::authenticate())
         return true;
@@ -129,6 +131,11 @@ Router::route_auth("POST", "/user/edit", $authFunction, function () {
 Router::route_auth("POST", "/profile/update", $authFunction, function () {
     if(UserController::update())
         Router::redirect("/");
+});
+
+Router::route_auth("POST", "/project/create", $authFunction, function () {
+    if(ProjectController::create())
+        Router::redirect("/allprojects");
 });
 
 Router::route_auth("GET", "/project/create", $authFunction, function () {
