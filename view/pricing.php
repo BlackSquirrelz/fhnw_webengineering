@@ -41,19 +41,11 @@
         <div class="row">
             <div class="col-md-12">
                 <h1 id="pricing-heading">Pricing</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <h4>Free Version</h4>
-                <p><a class="btn btn-primary" role="button" href="signup.html">SIGN UP</a></p>
-            </div>
-            <div class="col-md-4">
                 <h2>Free Version</h2>
-                <p><a class="btn btn-primary" role="button" href="signup.html" style="font-size:14px;">SIGN UP</a></p>
-            </div>
-            <div class="col-md-4">
-                <h4>Free Version</h4>
+                <p>WE-CRM is a completly free Online Project tool.</p>
+                <li>Unlimited useage during Betaphase</li>
+                <li>Submit now and register for live-long free version exclusivly for BetaUsers.</li>
+                <li>In 2019 we will launch are Full Version starting from 10 $ / user / month</li>
                 <p><a class="btn btn-primary" role="button" href="signup.html">SIGN UP</a></p>
             </div>
         </div>

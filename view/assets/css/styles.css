@@ -40,24 +40,31 @@ body {
 }
 
 #pricing-block {
-                 text-align:center;
-                 background-color:grey;
-                 background-color:rgba(225, 225, 225, 0.9);
-                 margin:100px 200px 20px 200px;
-                 padding:40px;
+                text-align:center;
+                background-color:grey;
+                background-color:rgba(225, 225, 225, 0.9);
+                margin:100px 200px 20px 200px;
+                padding:40px;
+                alignment: center;
 }
 
 #pricing-heading {
   margin-bottom:60px;
+
 }
 
 #whoweare-block {
-  text-align:center;
-  background-color:grey;
-  background-color:rgba(225, 225, 225, 0.9);
-  margin:100px 200px 20px 200px;
-  padding:40px;
+  text-align: center;
+  background-color: grey;
+  background-color: rgba(225, 225, 225, 0.9);
+  margin: 100px 200px 20px 200px;
+  padding: 40px;
+
 }
+
+
+
+
 
 #login-div {
   position:relative;

@@ -13,12 +13,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2018_webengineering</title>
+    <title>WE-Timecatcher</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600">
     <link rel="stylesheet" href="assets/css/Footer-Basic.css">
     <link rel="stylesheet" href="assets/css/Navigation-with-Search.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/team.css">
 </head>
 
 <body id="base-div">
@@ -35,7 +36,7 @@
                 </ul><a class="btn btn-primary" role="button" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/register">SIGN UP</a></div>
     </div>
 </nav>
-<div id="pricing-block">
+<div id="whoweare-block">
     <div class="container">
         <div class="row">
             <div class="column">
@@ -45,21 +46,27 @@
                         <h2>Tobias Weisskopf</h2>
                         <p class="title">CEO &amp; Founder</p>
                         <p>The brain.</p>
-                        <p>tobias@we-crm.com</p>
-                        <p><button class="button">Contact</button></p>
+                        <p>tobias@timecatchers.com</p>
+                        <a href="mailto:tobias@timecatchers.com?subject=Contact request for WE-CRM
+                        &body=Hi Tobias, Please contant me about WE-CRM">
+                            <button id="btnOutlook">Send Email to Tobi</button>
+                        </a>
                     </div>
                 </div>
             </div>
 
             <div class="column">
                 <div class="card">
-                    <img src="assets\img\tobi.jpg" alt="tobi" style="width:100%">
+                    <img src="assets\img\fabian.jpg" alt="fabian" style="width:100%">
                     <div class="container">
                         <h2>Fabian Witschi</h2>
                         <p class="title">Art Director</p>
                         <p>The artist.</p>
-                        <p>fabian@we-crm.com</p>
-                        <p><button class="button">Contact</button></p>
+                        <p>fabian@timecatchers.com</p>
+                        <a href="mailto:fabian@timecatchers.com?subject=Contact request for WE-CRM
+                        &body=Hi Fabian, Please contant me about WE-CRM">
+                            <button id="btnOutlook">Send Email to Fabian</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -71,8 +78,11 @@
                         <h2>Roger Kuratle</h2>
                         <p class="title">Head of content</p>
                         <p>The content.</p>
-                        <p>roger@we-crm.com</p>
-                        <p><button class="button">Contact</button></p>
+                        <p>roger@timecatchers.com</p>
+                        <a href="mailto:roger@timecatchers.com?subject=Contact request for WE-CRM
+                        &body=Hi Roger, Please contant me about WE-CRM">
+                            <button id="btnOutlook">Send Email to Roger</button>
+                        </a>
                     </div>
                 </div>
             </div>

@@ -97,6 +97,10 @@ Router::route_auth("GET", "/profile", $authFunction, function () {
     UserController::profileView();
 });
 
+Router::route("GET", "/pricing", function () {
+    UserController::pricingView();
+});
+
 Router::route_auth("GET", "/projects", $authFunction, function () {
     UserController::projectView();
 });
