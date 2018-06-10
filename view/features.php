@@ -20,22 +20,22 @@ include 'landingheader.php';
         <div class="row">
             <div class="col-md-3">
                 <h4>Start creating</h4>
-                <p>Create your project</p>
-                <p>Use Timecatchers to create your own projects and keep track of your work</p>
-                <p>Or use it collaborate with your team members on their projects</p>
+                <p3>Create your project</p3>
+                <p3>Use Timecatchers to create your own projects and keep track of your work</p3>
+                <p3>Or use it collaborate with your team members on their projects</p3>
             </div>
             <div class="col-md-3">
                 <h4>Become efficient</h4>
-                <p>Send Emails and reports directly from the Webapplication</p>
+                <p3>Send Emails and reports directly from the Webapplication</p3>
             </div>
             <div class="col-md-3">
                 <h4>Be safe</h4>
-                <p>If you forgot your password, no worries.</p>
-                <p>Just click "Reset Password" and you receive a link to your email adresss to reset it.</p>
+                <p3>If you forgot your password, no worries.</p3>
+                <p3>Just click "Reset Password" and you receive a link to your email adresss to reset it.</p3>
             </div>
             <div class="col-md-3">
                 <h4>Collaborate</h4>
-                <p>Allocate tasks to team members</p>
+                <p3>Allocate tasks to team members</p3>
             </div>
         </div>
         <h5>Join us and become a timecatcher today</h5>
