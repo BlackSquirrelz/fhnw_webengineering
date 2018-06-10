@@ -13,7 +13,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2018_webengineering</title>
+    <title>WE-Timecatcher</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600">
     <link rel="stylesheet" href="assets/css/Footer-Basic.css">
@@ -45,8 +45,8 @@
                         <h2>Tobias Weisskopf</h2>
                         <p class="title">CEO &amp; Founder</p>
                         <p>The brain.</p>
-                        <p>tobias@we-crm.com</p>
-                        <a href="mailto:tobias@we-crm.com?subject=Contact request for WE-CRM
+                        <p>tobias@timecatchers.com</p>
+                        <a href="mailto:tobias@timecatchers.com?subject=Contact request for WE-CRM
                         &body=Hi Tobias, Please contant me about WE-CRM">
                             <button id="btnOutlook">Send Email to Tobi</button>
                         </a>
@@ -61,8 +61,9 @@
                         <h2>Fabian Witschi</h2>
                         <p class="title">Art Director</p>
                         <p>The artist.</p>
-                        <p>fabian@we-crm.com</p>
-                        <a href="mailto:fabian@we-crm.com?subject=Contact request for WE-CRM
+                        <p>fabian@timecatchers.com</p>
+                        <a href="mailto:fabian@timecatchers.com?subject=Contact request for WE-CRM
+                        &body=Hi Fabian, Please contant me about WE-CRM">
                             <button id="btnOutlook">Send Email to Fabian</button>
                         </a>
                     </div>
@@ -76,8 +77,8 @@
                         <h2>Roger Kuratle</h2>
                         <p class="title">Head of content</p>
                         <p>The content.</p>
-                        <p>roger@we-crm.com</p>
-                        <a href="mailto:roger@we-crm.com?subject=Contact request for WE-CRM
+                        <p>roger@timecatchers.com</p>
+                        <a href="mailto:roger@timecatchers.com?subject=Contact request for WE-CRM
                         &body=Hi Roger, Please contant me about WE-CRM">
                             <button id="btnOutlook">Send Email to Roger</button>
                         </a>
