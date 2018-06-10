@@ -46,8 +46,10 @@
         </div>
     </div>
 </nav>
+
 <div id="whoweare-block">
     <div class="container">
+        <h1>Meet the Team</h1>
         <div class="row">
             <div class="column">
                 <div class="card">
