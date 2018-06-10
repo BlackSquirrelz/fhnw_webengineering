@@ -6,17 +6,11 @@
  * Time: 16:04
  */
 
+include 'projectheader.php';
+
 use view\TemplateView;
 ?>
-<body>
-<h1 class="menu-heading">Projects</h1>
-<div class="card">
-    <div class="card-header">
-        <ul class="nav nav-tabs card-header-tabs">
-            <li class="nav-item"><a class="nav-link" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/projects">Dashboard</a></li>
-            <li class="nav-item"><a class="nav-link active" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/allprojects">All Projects</a></li>
-        </ul>
-    </div>
+
     <div class="card-body">
             <table class="table">
                 <thead>
@@ -62,10 +56,5 @@ use view\TemplateView;
             </div>
         </div>
 </div>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/main.js"></script>
 
-
-</body>
-
+<?php include 'userfooter.php' ; ?>

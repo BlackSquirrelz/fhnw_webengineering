@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body id="base-div">
+<body id="home-div">
 <nav class="navbar navbar-light navbar-expand-md" id="navbar">
     <div class="container-fluid"><a class="navbar-brand" href="#"><img src="assets/img/timecatcher-icon.png" class="logo" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/login"><strong>&nbsp; TimeCatcher</strong></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
         <div
