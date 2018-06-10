@@ -27,7 +27,7 @@ class Config
             var_dump($_ENV["CLEARDB_DATABASE_URL"]);
             if (isset($_ENV["CLEARDB_DATABASE_URL"])) {
                 $dbopts = parse_url(getenv('CLEARDB_DATABASE_URL'));
-                $URL =self::$config["pdo"]["dsn"] = "mysql" . ":host=" . $dbopts["host"] . ";port=" . $dbopts["port"] . "; dbname=" . ltrim($dbopts["path"], '/') . "; sslmode=require";
+                $URL =self::$config["pdo"]["dsn"] = "mysql" . ":host=" . $dbopts["host"] . ";port=" . 3306 . "; dbname=" . ltrim($dbopts["path"], '/') . "; sslmode=require";
                 $User = self::$config["pdo"]["user"] = $dbopts["user"];
                 $password = self::$config["pdo"]["password"] = $dbopts["pass"];
                 var_dump($URL, $User, $password);
