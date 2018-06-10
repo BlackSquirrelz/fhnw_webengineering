@@ -9,6 +9,7 @@
 namespace controller;
 
 use service\AuthServiceImpl;
+use service\ProjectServiceImpl;
 use validator\UserValidator;
 use view\TemplateView;
 use domain\User;
@@ -48,24 +49,21 @@ class UserController
         echo (new TemplateView("features.php"))->render();
     }
 
-    public static function allProjectsView(){
-        echo (new TemplateView("allProjects.php"))->render();
-    }
-
     public static function createProjectView(){
         echo (new TemplateView("projectCreate.php"))->render();
     }
 
     public static function profileView(){
-        echo (new TemplateView("profile.php"))->render();
+        $contentView = new TemplateView("profile.php");
+        $contentView->user = (AuthServiceImpl::getInstance()->readUser());
+        LayoutRendering::basicLayout($contentView);
     }
 
     public static function projectView(){
-        echo (new TemplateView("projects.php"))->render();
-    }
-
-    public static function settingsView(){
-        echo (new TemplateView("settings.php"))->render();
+        $contentView = new TemplateView("projects.php");
+        $contentView->user = (AuthServiceImpl::getInstance()->readUser());
+        $contentView->projects = (new ProjectServiceImpl())->findAllProjects();
+        LayoutRendering::basicLayout($contentView);
     }
 
     public static function loginView(){
