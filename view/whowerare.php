@@ -35,7 +35,7 @@
                 </ul><a class="btn btn-primary" role="button" href="<?php echo $GLOBALS["ROOT_URL"]; ?>/register">SIGN UP</a></div>
     </div>
 </nav>
-<div id="pricing-block">
+<div id="whoweare-block">
     <div class="container">
         <div class="row">
             <div class="column">

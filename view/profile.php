@@ -30,7 +30,7 @@ isset($this->userValidator) ? $userValidator = $this->userValidator : $userValid
 
 <body>
 <h1 class="menu-heading">Profile</h1>
-<h2 class="text-center"><strong>Hi, <?php echo TemplateView::noHTML($user->getUserName()); ?> welcome to you profile!</strong></h2></div>
+    <h2 class="text-center"><strong>Hi, <?php echo TemplateView::noHTML($user->getUserName()); ?> welcome to you profile!</strong></h2></div>
 <div></div>
 <div class="container profile profile-view" id="profile">
     <form action="<?php echo $GLOBALS["ROOT_URL"]; ?><?php echo isset($this->pageFormAction) ? $this->pageFormAction : "/profile/update"; ?>" method="post">
