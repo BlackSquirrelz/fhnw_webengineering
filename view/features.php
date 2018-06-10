@@ -45,19 +45,19 @@
         <div class="row">
             <div class="col-md-3">
                 <h4>Feature 1</h4>
-                <p>Description</p>
+                <p>Create your own project</p>
             </div>
             <div class="col-md-3">
                 <h4>Feature 2</h4>
-                <p>Description</p>
+                <p>Work together on big projects</p>
             </div>
             <div class="col-md-3">
                 <h4>Feature 3</h4>
-                <p>Description</p>
+                <p>Web-Application for all devices</p>
             </div>
             <div class="col-md-3">
                 <h4>Feature 4</h4>
-                <p>Description</p>
+                <p>Allocate tasks to team members</p>
             </div>
         </div>
     </div>

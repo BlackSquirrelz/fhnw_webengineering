@@ -63,7 +63,6 @@
                         <p>The artist.</p>
                         <p>fabian@we-crm.com</p>
                         <a href="mailto:fabian@we-crm.com?subject=Contact request for WE-CRM
-                        &body=Hi Fabian, Please contant me about WE-CRM">
                             <button id="btnOutlook">Send Email to Fabian</button>
                         </a>
                     </div>
