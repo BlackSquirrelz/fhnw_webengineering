@@ -129,7 +129,7 @@ Create Project, Profile, Modify Project.
 <br>
 
 ## Design
-SOME TEXT TO ADD HERE
+The design is simple and with straight lines. The mookup were creating as Wireframes and than implemented with CSS.
 <br>
 <br>
 
