@@ -51,7 +51,7 @@ isset($this->projectValidator) ? $projectValidator = $this->projectValidator : $
             <p class="help-block"><?php echo $projectValidator->getEndDateError() ?></p>
         </div>
         <div class="btn-group" role="group">
-            <button class="btn btn-default" type="submit">Update<i class="fa fa-save"></i></button>
+            <button class="btn btn-default" type="submit">Confirm<i class="fa fa-save"></i></button>
         </div>
     </form>
 </div>
