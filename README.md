@@ -43,13 +43,12 @@ Final Project Work in Web Engineering @FHNW
 <br>
 <br>
 
-##General
+## General
 
 #### Team Members
 - Fabian _W._
 - Roger _K._
 - Tobias _W._
-<br>
 <br>
 
 #### Timecatcher: Description
@@ -107,7 +106,7 @@ SOME TEXT TO ADD HERE
 <br>
 <br>
 
-##Use Cases
+## Use Cases
 SOME TEXT TO ADD HERE
 <br>
 <br>
@@ -118,25 +117,24 @@ SOME TEXT TO ADD HERE
 <br>
 
 #### UC-2 Project Overview
-![](modelling/usecases/UC-1_Login_Register.png)
+![](modelling/usecases/)
 <br>
 <br>
 
 #### UC-3 Create Project
-![](modelling/usecases/UC-1_Login_Register.png)
+![](modelling/usecases/)
 <br>
 <br>
 
 #### UC-4 Profile
-![](modelling/usecases/UC-1_Login_Register.png)
+![](modelling/usecases/)
 <br>
 <br>
 
 #### UC-5 Modify Project
-![](modelling/usecases/UC-1_Login_Register.png)
+![](modelling/usecases/)
 <br>
 <br>
-
 
 ## Design
 SOME TEXT TO ADD HERE
