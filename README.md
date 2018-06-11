@@ -143,6 +143,9 @@ SOME TEXT TO ADD HERE
 #### Information Systems (Layering) Architecture
 ![](modelling/layers/Layering_Structures_2.png)
 <br>
+This shows the IS layering architecture and the interaction among the layers or outside the
+application.
+<br>
 <br>
 
 ## Database
