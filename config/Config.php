@@ -26,7 +26,7 @@ class Config
         } else {
             //var_dump($_ENV["CLEARDB_DATABASE_URL"]);
             if (isset($_ENV["CLEARDB_DATABASE_URL"])) {
-                //$dbopts = parse_url(getenv('CLEARDB_DATABASE_URL'));
+                $dbopts = parse_url(getenv('CLEARDB_DATABASE_URL'));
                 self::$config["pdo"]["dsn"] = "mysql" . ":host=" . getenv('host') . "dbname=" . getenv('database') . "); sslmode=require";
                 self::$config["pdo"]["user"] = getenv('user');
                 self::$config["pdo"]["password"] = getenv('password');
