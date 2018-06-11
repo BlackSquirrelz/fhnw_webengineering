@@ -139,7 +139,6 @@ Router::route_auth("POST", "/project/create", $authFunction, function () {
 });
 
 Router::route_auth("GET", "/project/create", $authFunction, function () {
-    var_dump("GET Project called");
     if(ProjectController::create())
         Router::redirect("/allprojects");
 });
