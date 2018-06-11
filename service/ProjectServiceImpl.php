@@ -30,7 +30,7 @@ class ProjectServiceImpl implements ProjectService
      * @throws HTTPException
      */
     public function createProject(Project $project) {
-        var_dump('This gets called');
+        var_dump('Create Project Called');
         if(AuthServiceImpl::getInstance()->verifyAuth()) {
             $projectDAO = new ProjectDAO();
             $project->setUserId(AuthServiceImpl::getInstance()->getCurrentUserId());

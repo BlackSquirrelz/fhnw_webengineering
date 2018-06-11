@@ -133,11 +133,10 @@ Router::route_auth("POST", "/profile/update", $authFunction, function () {
         Router::redirect("/");
 });
 
-/**Router::route_auth("POST", "/project/create", $authFunction, function () {
-    var_dump('Project Create goes here.... (update) then:');
-    if(ProjectController::create())
-        Router::redirect("/allprojects");
-});*/
+Router::route_auth("POST", "/project/create", $authFunction, function () {
+    if(ProjectController::update())
+        Router::redirect("/");
+});
 
 Router::route_auth("GET", "/project/create", $authFunction, function () {
     var_dump("GET Project called");

@@ -17,7 +17,7 @@ use view\LayoutRendering;
 class ProjectController
 {
     public static function create(){
-        $contentView = new TemplateView("projectEdit.php");
+        $contentView = new TemplateView("projectCreate.php");
         LayoutRendering::basicLayout($contentView);
     }
     public static function readAll(){
@@ -41,13 +41,11 @@ class ProjectController
         $projectValidator = new ProjectValidator($project);
         if($projectValidator->isValid()) {
             if ($project->getId() === "") {
-                var_dump("Project Controller gets called");
                 (new ProjectServiceImpl())->createProject($project);
             } else {
                 (new ProjectServiceImpl())->updateProject($project);
             }
-        }
-        else{
+        } else{
             $contentView = new TemplateView("projectCreate.php");
             $contentView->projects = $project;
             $contentView->projectValidator  = $projectValidator;
