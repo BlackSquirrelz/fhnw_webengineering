@@ -5,29 +5,54 @@
  * Date: 6/2/18
  * Time: 16:03
  */
+
+use view\TemplateView;
+use domain\Project;
+use validator\projectValidator;
+
+isset($this->projects) ? $project = $this->projects : $project = new Project();
+isset($this->projectValidator) ? $projectValidator = $this->projectValidator : $projectValidator = new projectValidator();
 ?>
 <h1 class="menu-heading">Create new Project</h1>
 <div>
-    <form action="<?php echo $GLOBALS["ROOT_URL"]; ?>/project/create" method="post" id="createproject-form">
-        <p class="newproject-paragraph">
-            <label>Project Name</label>
-        </p>
-        <input class="form-control" type="text" name="project_name" required="1" placeholder="Enter a suitable project name">
-        <p class="newproject-paragraph">
-            <label>Project Description</label>
-        </p>
-        <textarea class="form-control" name="project_desc" rows="10" cols="1" required="0" placeholder="Enter a comprehensive description of this project"></textarea>
-        <p class="newproject-paragraph">
-            <label>Start Date</label>
-        </p>
-        <input class="form-control" type="date" name="p_startate" required="1" placeholder="Enter a start date">
-        <p class="newproject-paragraph">
-            <label>End Date</label>
-        </p>
-        <input class="form-control" type="date" required="0" name="p_enddate" placeholder="Enter an end date">
-        <p class="text-center newproject-paragraph">
-            <button class="btn btn-primary" type="submit">Create Project</button>
-        </p>
+        <form action="create" method="post">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon"><span>ID </span></div>
+                    <input class="form-control" type="text" name="id" readonly="" value="<?php echo TemplateView::noHTML($project->getId()) ?>">
+                </div>
+            </div>
+            <div class="form-group <?php echo $projectValidator->isNameError() ? "has-error" : ""; ?>">
+                <div class="input-group">
+                    <div class="input-group-addon"><span>Project Name </span></div>
+                    <input class="form-control" type="text" name="project_name" value="<?php echo TemplateView::noHTML($project->getName()) ?>">
+                </div>
+                <p class="help-block"><?php echo $projectValidator->getNameError() ?></p>
+            </div>
+            <div class="form-group <?php echo $projectValidator->isDescriptionError() ? "has-error" : ""; ?>">
+                <div class="input-group">
+                    <div class="input-group-addon"><span>Project Description </span></div>
+                    <input class="form-control" type="text" name="project_desc" value="<?php echo TemplateView::noHTML($project->getDesc()) ?>">
+                </div>
+                <p class="help-block"><?php echo $projectValidator->getDescriptionError() ?></p>
+            </div>
+            <div class="form-group <?php echo $projectValidator->isStartDateError() ? "has-error" : ""; ?>">
+                <div class="input-group">
+                    <div class="input-group-addon"><span>Start Date </span></div>
+                    <input class="form-control" type="date" name="p_startdate" value="<?php echo TemplateView::noHTML($project->getStartDate()) ?>">
+                </div>
+                <p class="help-block"><?php echo $projectValidator->getStartDateError() ?></p>
+            </div>
+            <div class="form-group <?php echo $projectValidator->isEndDateError() ? "has-error" : ""; ?>">
+                <div class="input-group">
+                    <div class="input-group-addon"><span>End Date </span></div>
+                    <input class="form-control" type="date" name="p_enddate" value="<?php echo TemplateView::noHTML($project->getEndDate()) ?>">
+                </div>
+                <p class="help-block"><?php echo $projectValidator->getEndDateError() ?></p>
+            </div>
+            <p class="text-center newproject-paragraph">
+                <button class="btn btn-primary" type="submit">Create Project</button>
+            </p>
     </form>
 </div>
 <script src="assets/js/jquery.min.js"></script>

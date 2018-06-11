@@ -22,12 +22,14 @@ class ProjectDAO extends BasicDAO {
 */
     public function create(Project $project) {
         $stmt = $this->pdoInstance->prepare('
-            INSERT INTO project (project_name, project_desc, p_startdate, p_enddate, P_USERS _ID, p_admin, p_owner)
-            VALUES (:p_name, :p_desc , :p_start, :p_end, :p_admin, :p_owner);');
-
+            INSERT INTO project (project_name, project_desc, p_startdate, p_enddate,userID)
+            VALUES (:p_name, :p_desc , :p_start, :p_end,:userID);');
+        //$stmt->bindValue(':id', $project->getId());
         $stmt->bindValue(':p_name', $project->getName());
         $stmt->bindValue(':p_desc', $project->getDesc());
         $stmt->bindValue(':p_start', $project->getStartDate());
+        $stmt->bindValue(':p_end', $project->getEndDate());
+        $stmt->bindValue('userID', $project->getUserId());
         $stmt->execute();
         return $this->read($this->pdoInstance->lastInsertId());
     }
