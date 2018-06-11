@@ -31,7 +31,7 @@ isset($this->projectValidator) ? $projectValidator = $this->projectValidator : $
             </div>
             <div class="form-group <?php echo $projectValidator->isDescriptionError() ? "has-error" : ""; ?>">
                 <div class="input-group">
-                    <div class="input-group-addon"><span>Projett Description </span></div>
+                    <div class="input-group-addon"><span>Project Description </span></div>
                     <input class="form-control" type="text" name="project_desc" value="<?php echo TemplateView::noHTML($project->getDesc()) ?>">
                 </div>
                 <p class="help-block"><?php echo $projectValidator->getDescriptionError() ?></p>
