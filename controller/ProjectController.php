@@ -21,7 +21,7 @@ class ProjectController
         LayoutRendering::basicLayout($contentView);
     }
     public static function readAll(){
-        $contentView = new TemplateView("allprojects.php");
+        $contentView = new TemplateView("allProjects.php");
         $contentView->projects = (new ProjectServiceImpl())->findAllProjects();
         LayoutRendering::basicLayout($contentView);
     }
