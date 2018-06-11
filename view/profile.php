@@ -45,7 +45,7 @@ isset($this->userValidator) ? $userValidator = $this->userValidator : $userValid
                     </div>
                     <div></div>
                     <div class="form-group <?php echo $userValidator->isLastNameError() ? "has-error" : ""; ?>">
-                        <h4>First Name </h4><br><input class="form-control" type="text" name="last_name" placeholder="Last Name" value="<?php echo $user->getLastName() ?>">
+                        <h4>Last Name </h4><br><input class="form-control" type="text" name="last_name" placeholder="Last Name" value="<?php echo $user->getLastName() ?>">
                         <p class="help-block"><?php echo $userValidator->getLastNameError() ?></p>
                     </div>
                     <div class="form-group <?php echo $userValidator->isUsernameError() ? "has-error" : ""; ?>">
