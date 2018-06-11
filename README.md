@@ -141,7 +141,6 @@ SOME TEXT TO ADD HERE
 <br>
 
 #### Information Systems (Layering) Architecture
-
 ![](modelling/layers/Layering Structures.png)
 <br>
 <br>
