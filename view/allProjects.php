@@ -24,7 +24,7 @@ use view\TemplateView;
                 <tbody>
                 <?php
                 foreach($this->projects as $project): /* @var \domain\Project $project */ ?>
-                    <tr data-project='hsdfhsdjfds' id="project-<?php echo TemplateView::noHTML($project->getId()); ?>">
+                    <tr data-project='test' id="project-<?php echo TemplateView::noHTML($project->getId()); ?>">
                         <td><?php echo TemplateView::noHTML($project->getName()); ?></td>
                         <td><?php echo TemplateView::noHTML($project->getDesc()); ?> </td>
                         <td><?php echo TemplateView::noHTML($project->getStartDate()); ?> </td>
