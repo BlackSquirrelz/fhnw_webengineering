@@ -6,8 +6,6 @@
     padding: 0 8px;
 }
 
-
-
 /* Display the columns below each other instead of side by side on small screens */
 @media screen and (max-width: 650px) {
     .column {
@@ -17,7 +15,7 @@
 }
 
 body h2 {
-    color: black
+    color: black;
 }
 
 /* Add some shadows to create a card effect */

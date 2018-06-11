@@ -22,7 +22,7 @@ include 'landingheader.php';
                 <h4>Start creating</h4>
                 <p3>Create your project</p3>
                 <p3>Use Timecatchers to create your own projects and keep track of your work.</p3>
-                <p3>Or use it collaborate with your team members on their projects (Coming 2019)</p3>
+                <p3>Or use it to collaborate with your team members on their projects (Coming 2019)</p3>
             </div>
             <div class="col-md-3">
                 <h4>Become efficient</h4>
@@ -38,7 +38,7 @@ include 'landingheader.php';
                 <p3>Allocate tasks to team members (Coming 2019)</p3>
             </div>
         </div>
-        <h5>Join us and become a timecatcher today</h5>
+        <h5>Join us and become a Timecatcher today</h5>
     </div>
 </div>
 
