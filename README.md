@@ -136,15 +136,18 @@ the following two diagrams give a better insight in the layers architecture.
 <br>
 
 #### Information Systems Modelling
-SOME TEXT TO ADD HERE
+![](modelling/layers/Layering_Structures_1.png)
+<br>
+This shows the IS layers with the basic interaction among the layers. Further, the key classes
+are visible as well.
 <br>
 <br>
 
 #### Information Systems (Layering) Architecture
 ![](modelling/layers/Layering_Structures_2.png)
 <br>
-This shows the IS layering architecture and the interaction among the layers or outside the
-application.
+This shows the IS layering architecture and the interaction among the layers and its "action-folders"
+or outside the application.
 <br>
 <br>
 
