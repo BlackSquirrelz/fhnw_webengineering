@@ -61,10 +61,10 @@ isset($this->userValidator) ? $userValidator = $this->userValidator : $userValid
                         <p class="help-block"><?php echo $userValidator->getPasswordError() ?></p>
                     </div>
                 <hr>
-                <div class="form-row">
-                    <button class="btn btn-primary btn-block" type="submit"><?php echo isset($this->pageSubmitText) ? $this->pageSubmitText : "Update Information"; ?></button></div>
-                </div>
+            <div class="col-md-12">
+            <button class="btn btn-primary btn-block" type="submit"><?php echo isset($this->pageSubmitText) ? $this->pageSubmitText : "Update Information"; ?></button></div>
             </div>
+        </div>
         </div>
     </form>
 </div>

@@ -41,6 +41,7 @@ class ProjectController
         $projectValidator = new ProjectValidator($project);
         if($projectValidator->isValid()) {
             if ($project->getId() === "") {
+                var_dump("Project Controller gets called");
                 (new ProjectServiceImpl())->createProject($project);
             } else {
                 (new ProjectServiceImpl())->updateProject($project);
