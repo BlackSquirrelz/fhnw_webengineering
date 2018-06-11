@@ -53,16 +53,11 @@ Final Project Work in Web Engineering @FHNW
 <br>
 
 #### Timecatcher: Description
-The basis for the assignment is a website that allows a user to track the time spent on each project.
-There are two types of users, a general user who can participate in a project and an administrator 
-who can add new users to a project, and create projects. Each user should be able to set up new tasks
-and track the time spent on each task by clicking on a button. The admin is able to create new projects
-and allocate users to a it. The administrator also is able to look at the overall time spent on each
-project and the costs that have incurred so far. An administrator also has the possibility to create
-and reassign tasks to different users in the project, respectively manage the projects ressources. A
-normal user can download a timesheet on daily, weekly and monthly basis, to be signed off by the
-management. The administrator can download a summary report of time spent on the project by day,
-week, month, and overall.
+The website is an online application that allows user to sign up and log in on their personal "space".
+Users have the possibility to view all projects on one single page and even create a list of the projects
+as a pdf or send the list via email - new projects can be created as well. The projects include the
+following properties: Project Name, Project Description, Starting Date, and the scheduledClosing Date
+Finally, the user can edit their personal information within the "profile" page.
 <br>
 <br>
 
