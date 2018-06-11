@@ -14,6 +14,7 @@ class Database
     protected function __construct()
     {
         try{
+            //var_dump(Config::pdoConfig('dsn'));
             self::$pdoInstance = new PDO (Config::pdoConfig("dsn"), Config::pdoConfig("user"), Config::pdoConfig("password"));
             self::$pdoInstance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $exception) {
