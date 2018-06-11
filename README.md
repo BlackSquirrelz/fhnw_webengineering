@@ -35,6 +35,7 @@ Final Project Work in Web Engineering @FHNW
     - [Wireframe Diagrams](#wireframe-diagrams)
         - [Initial Page](#initial-page)
         - [Project Overview Page](#project-overview-page)
+        - [Project Dashboard Page](#project-dashboard-page)
         - [Sign Up Page](#sign-up-page)
         - [Create Project Page](#create-project-page)
         - [Profile Page](#profile-page)
@@ -96,11 +97,6 @@ Just update or delete your account as you wish.
 <br>
 <br>
 
-##### _Modify Project_
-If you want to change some properties in your project - do with the project modification function.
-<br>
-<br>
-
 ##### _Email_
 Send the list of the projects to yourself via email.
 <br>
@@ -133,11 +129,6 @@ Create Project, Profile, Modify Project.
 <br>
 
 #### UC-4 Profile
-![](modelling/usecases/)
-<br>
-<br>
-
-#### UC-5 Modify Project
 ![](modelling/usecases/)
 <br>
 <br>
@@ -228,12 +219,13 @@ the final product of this project work.
 #### Wireframe Diagrams
 This section contains a few wireframe diagrams that demonstrate how the user interface looks (rough
 estimation) and how they are connected to one antoher; in other words, what page is connected to
-the another one. Note: Only pages that have valuable functions have been drawn into diagrams.
+the another one. Note: Only pages that have valuable functions have been drawn into diagrams.<br>
+However, almost all pages are available throughout the whole page thanks to a nav bar at the top.
 <br>
 <br>
 
 ##### _Initial Page_
-![](modelling/wireframe/Login-Page.png)
+![](modelling/wireframe/LogIn-Page.png)
 <br>
 From this page, if you log in, you get to the project overview page - if you will have to register
 you may get to the sign up page.
@@ -241,37 +233,37 @@ you may get to the sign up page.
 <br>
 
 ##### _Project Overview Page_
-![](modelling/wireframe/)
+![](modelling/wireframe/AllProjects-Page.png)
 <br>
-SOME TEXT TO ADD HERE
+This page allows to get to the page "create project" or through "create pdf report" to a pdf view.
+<br>
+<br>
+
+##### _Project Dashboard Page_
+![](modelling/wireframe/Dashboard-Page.png)
+<br>
+Allow you to see the last three projects.
 <br>
 <br>
 
 ##### _Sign Up Page_
-![](modelling/wireframe/)
+![](modelling/wireframe/SignUp-Page.png)
 <br>
-SOME TEXT TO ADD HERE
+After signing up, you will get to the login page in order to log in properly.
 <br>
 <br>
 
 ##### _Create Project Page_
-![](modelling/wireframe/)
+![](modelling/wireframe/CreateProject-Page.png)
 <br>
-SOME TEXT TO ADD HERE
+After you set all the required properties the new project is created.
 <br>
 <br>
 
 ##### _Profile Page_
-![](modelling/wireframe/)
+![](modelling/wireframe/Profile-Page.png)
 <br>
-SOME TEXT TO ADD HERE
-<br>
-<br>
-
-##### _Modify Project Page_
-![](modelling/wireframe/)
-<br>
-SOME TEXT TO ADD HERE
+You may change your profile properties.
 <br>
 <br>
 
