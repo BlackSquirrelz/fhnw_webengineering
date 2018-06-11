@@ -1,122 +1,274 @@
-# timecatcher
+# Timecatcher
 
-Project for Webengineering course @FHNW
+Final Project Work in Web Engineering @FHNW
+<br>
 
-<h3>General</h3>
+#### Table of Contents
+- [General](#general)
+    - [Team Members](#team-members)
+    - [Timecatcher Description](#timecatcher-description)
+    - [Functionalities: Brief Description](#functionalities-brief-description)
+        - [Register](#register)
+        - [Login](#login)
+        - [Project Overview](#project-overview)
+        - [Create Project](#create-project)
+        - [Profile](#profile)
+        - [Modify Project](#modify-project)
+        - [Email](#email)
+        - [PDF](#pdf)
+- [Use Cases](#use-cases)
+    - [UC-1 Register/Login](#uc-1-register-and-login)
+    - [UC-2 Project Overview](#uc-2-project-overview)
+    - [UC-3 Create Project](#uc-3-create-project)
+    - [UC-4 Profile](#uc-4-profile)
+    - [UC-5 Modify Project](#uc-5-modify-project)
+- [Design](#design)
+    - [Information Systems Modelling](#information-systems-modelling)
+    - [Information Systems (Layering) Architecture](#information-systems-layering-architecture)
+- [Database](#database)
+    - [Entity Relationship Diagram (ERD)](#entity-relationship-diagram-erd)
+        - [SQL Table: user](#sql-table-user)
+        - [SQL Table: authtoken](#sql-table-authtoken)
+        - [SQL Table: project](#sql-table-project)
+        - [SQL Table: user_project](#sql-table-user-project)
+- [Implementation](#implementation)
+    - [Wireframe Diagrams](#wireframe-diagrams)
+        - [Initial Page](#initial-page)
+        - [Project Overview Page](#project-overview-page)
+        - [Sign Up Page](#sign-up-page)
+        - [Create Project Page](#create-project-page)
+        - [Profile Page](#profile-page)
+        - [Modify Project Page](#modify-project-page)
+- [Heroku Link](#heroku-link)
+<br>
+<br>
 
-<h4>Team:</h4>
-- Fabian W. 
-- Roger K.
-- Tobias W.
+##General
 
-<b>DEADLINE: 11 June 2018</b><br>
-<u>PLEASE NOTE!!</u> <br><br>
-Evaluation: Examiners will be A.M, and S.J;
-Focus also on Architecture (also evaluated), and Design 
+#### Team Members
+- Fabian _W._
+- Roger _K._
+- Tobias _W._
+<br>
+<br>
 
-For ToDo's please see projects page on github.<br> 
-If there is a bug, a todo, or an issue, please submit a new issue through the GitHub page.
-
-All documentation should be added to GitHub readme.md file or be tracked in either project or issues.
-
-<h3>Scenario:</h3>
+#### Timecatcher: Description
 The basis for the assignment is a website that allows a user to track the time spent on each project.
-There are two types of users, a general user who can participate in a project and an administrator who
-can add new users to a project, and create projects. 
-Each user should be able to set up new tasks and track the time spent on each task by clicking on a button.
-The admin is able to create new projects and allocate users to a it. The administrator also is able to look at
-the overall time spent on each project and the costs that have incurred so far. 
-An administrator also has the possibility to create and reassign tasks to different users in the project, respectively manage the projects ressources.
-A normal user can download a timesheet on daily, weekly and monthly basis, to be signed off by the management. The administrator can download a summary report of time spent on the project by day, week, month, and overall.
+There are two types of users, a general user who can participate in a project and an administrator 
+who can add new users to a project, and create projects. Each user should be able to set up new tasks
+and track the time spent on each task by clicking on a button. The admin is able to create new projects
+and allocate users to a it. The administrator also is able to look at the overall time spent on each
+project and the costs that have incurred so far. An administrator also has the possibility to create
+and reassign tasks to different users in the project, respectively manage the projects ressources. A
+normal user can download a timesheet on daily, weekly and monthly basis, to be signed off by the
+management. The administrator can download a summary report of time spent on the project by day,
+week, month, and overall.
+<br>
+<br>
+
+#### Functionalities: Brief Description
+##### _Register_
+SOME TEXT TO ADD HERE
+<br>
+<br>
+
+##### _Login_
+SOME TEXT TO ADD HERE
+<br>
+<br>
+
+##### _Project Overview_
+SOME TEXT TO ADD HERE
+<br>
+<br>
+
+##### _Create Project_
+SOME TEXT TO ADD HERE
+<br>
+<br>
+
+##### _Profile_
+SOME TEXT TO ADD HERE
+<br>
+<br>
+
+##### _Modify Project_
+SOME TEXT TO ADD HERE
+<br>
+<br>
+
+##### _Email_
+SOME TEXT TO ADD HERE
+<br>
+<br>
+
+##### _PDF_
+SOME TEXT TO ADD HERE
+<br>
+<br>
+
+##Use Cases
+SOME TEXT TO ADD HERE
+<br>
+<br>
+
+#### UC-1 Register and Login
+![](modelling/usecases/UC-1_Login_Register.png)
+<br>
+<br>
+
+#### UC-2 Project Overview
+![](modelling/usecases/UC-1_Login_Register.png)
+<br>
+<br>
+
+#### UC-3 Create Project
+![](modelling/usecases/UC-1_Login_Register.png)
+<br>
+<br>
+
+#### UC-4 Profile
+![](modelling/usecases/UC-1_Login_Register.png)
+<br>
+<br>
+
+#### UC-5 Modify Project
+![](modelling/usecases/UC-1_Login_Register.png)
+<br>
+<br>
 
 
-<h3>Requirements:</h3>
-All requirements are tracked in the project tab of this GitHub Repo.
+## Design
+SOME TEXT TO ADD HERE
+<br>
+<br>
 
-<h3>Use Cases:</h3>
-//TODO: Please add screenshots, and short description of the use cases here:
-<ol>
-<li>UC1: Register & Login</li>
-<li>UC2: Dashboard</li>
-<li>UC3: Project Page</li>
-<li>UC4: Analytics Page</li>
-<li>UC5: Administrator Page</li>
-<li>UC6: Team page (myTeam)</li>
-</ol>
+#### Information Systems Modelling
+SOME TEXT TO ADD HERE
+<br>
+<br>
 
-<h3>Users:</h3>
-- General User
-- Admin
+#### Information Systems (Layering) Architecture
+SOME TEXT TO ADD HERE
+<br>
+<br>
 
+## Database
+SOME TEXT TO ADD HERE
+<br>
+<br>
 
-<h2>Timeline:</h2>
+#### Entity Relationship Diagram (ERD)
+SOME TEXT TO ADD HERE
 
-<h3>19/03/2018 - Requirements</h3>
+![](modelling/erd/ERD-WE-TC.png)
+<br>
 
-Pages:
+From this diagram the following SQL queries can be derived:
+<br>
 
-- Login
-- Dashboard / Projects / Overall Analytics
-- Individual Project and Analytics
-- Team Overview
-- Admin page / user profile
+##### _SQL Table: user_
+CREATE TABLE `user` (ID int(7) NOT NULL AUTO_INCREMENT,<br>
+FIRST_NAME varchar(255) NOT NULL,<br>
+LAST_NAME varchar(255) NOT NULL,<br>
+USERNAME varchar(255) NOT NULL UNIQUE,<br>
+EMAIL varchar(255) NOT NULL UNIQUE,<br>
+PASSWORD varchar(60) NOT NULL,<br>
+PRIMARY KEY (ID),<br>
+UNIQUE INDEX (ID));<br>
 
-Functions:
-- registration
-- log in
-- data visualisation (admin)
-- save data (export to pdf or csv)
-- time
-    - Start Time
-    - End Time
-    - Total Time
-    - Difference
-- Todo List
-    - How much time spent on each todo item
-    
--my Team
-    - Team organisation
-    - Team tasks
-    - Time control
+##### _SQL Table: authtoken_
+CREATE TABLE authtoken (id int(10) NOT NULL AUTO_INCREMENT,<br>
+USER_ID int(7) NOT NULL,<br>
+SELECTOR varchar(255) NOT NULL,<br>
+VALIDATOR varchar(255) NOT NULL,<br>
+EXPIRATION timestamp NOT NULL,<br>
+TYPE int(10) NOT NULL,<br>
+PRIMARY KEY (id));<br>
+<br>
 
+ALTER TABLE authtoken ADD INDEX FKauthtoken624332 (USER_ID),<br>
+ADD CONSTRAINT FKauthtoken624332 FOREIGN KEY (USER_ID) REFERENCES `user` (ID);<br>
+<br>
 
-<h4>Should Have:</h4>
+##### _SQL Table: project_
+CREATE TABLE project (ID int(25) NOT NULL AUTO_INCREMENT,<br>
+PROJECT_NAME varchar(255) NOT NULL,<br>
+PROJECT_DESC text NOT NULL,<br>
+P_STARTDATE date NOT NULL,<br>
+P_ENDDATE date NOT NULL,<br>
+P_OWNER varchar(255) NOT NULL,<br>
+PRIMARY KEY (ID));<br>
+<br>
 
-- Upload function
-    - Team Upload (workspace)
-    
-- Previous Projects
-- Recent Projects
-    - A
-    - B
-    - C
+##### _SQL Table: user_project_
+CREATE TABLE user_project (userID int(7) NOT NULL,<br>
+projectID int(25) NOT NULL,<br>
+<br>
 
-<h4>Nice To Have:</h4>
+ALTER TABLE user_project ADD INDEX FKuser_proje911728 (userID),<br>
+ADD CONSTRAINT FKuser_proje911728 FOREIGN KEY (userID) REFERENCES `user` (ID);<br>
 
-   - Contracts
+ALTER TABLE user_project ADD INDEX FKuser_proje200153 (projectID),<br>
+ADD CONSTRAINT FKuser_proje200153 FOREIGN KEY (projectID) REFERENCES project (ID);<br>
+<br>
 
+## Implementation
+SOME TEXT TO ADD HERE
+<br>
+<br>
 
-<h3>26/03/2018 - Use Cases</h3>
+#### Wireframe Diagrams
+SOME TEXT TO ADD HERE
+<br>
+<br>
 
-- Use Cases
-    - Landing page (Toby)
-    - Dashboard (Fabian)
-    - Projects (Roger)
-    - Team Overview (Toby)
-    - Analytics (Fabian)
-    - Admin page (Roger)
+##### _Initial Page_
+![](modelling/wireframe/Login-Page.png)
+<br>
+SOME TEXT TO ADD HERE
+<br>
+<br>
 
-<h3>02/04/2018 -  Database setup and EDR</h3>
+##### _Project Overview Page_
+![](modelling/wireframe/Login-Page.png)
+<br>
+SOME TEXT TO ADD HERE
+<br>
+<br>
 
-<h3>30/05/2018 -  Create views
+##### _Sign Up Page_
+![](modelling/wireframe/Login-Page.png)
+<br>
+SOME TEXT TO ADD HERE
+<br>
+<br>
 
+##### _Create Project Page_
+![](modelling/wireframe/Login-Page.png)
+<br>
+SOME TEXT TO ADD HERE
+<br>
+<br>
 
+##### _Profile Page_
+![](modelling/wireframe/Login-Page.png)
+<br>
+SOME TEXT TO ADD HERE
+<br>
+<br>
 
+##### _Modify Project Page_
+![](modelling/wireframe/Login-Page.png)
+<br>
+SOME TEXT TO ADD HERE
+<br>
+<br>
 
-
-
-
-
-
-
-
+#### Heroku Link
+Please find below the link to the deployed Heroku application and play around:
+<br>
+https://we-timecatcher.herokuapp.com/
+<br>
+<br>
+HAVE FUN PLAYING WITH THE APP.
