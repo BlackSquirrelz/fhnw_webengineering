@@ -129,7 +129,9 @@ Create Project, Profile, Modify Project.
 <br>
 
 ## Design
-The design is simple and with straight lines. The mookup were creating as Wireframes and than implemented with CSS.
+The design is simple and with straight lines. The mookup were creating as Wireframes and than
+implemented with CSS. However, behind the "scenes" is more than just the presentation layer. Therefore
+the following two diagrams give a better insight in the layers architecture.
 <br>
 <br>
 
@@ -139,14 +141,14 @@ SOME TEXT TO ADD HERE
 <br>
 
 #### Information Systems (Layering) Architecture
-SOME TEXT TO ADD HERE
+![](modelling/layers/Layering_Structures_2.png)
+<br>
+This shows the IS layering architecture and the interaction among the layers or outside the
+application.
 <br>
 <br>
 
 ## Database
-SOME TEXT TO ADD HERE
-<br>
-<br>
 
 #### Entity Relationship Diagram (ERD)
 See below the ERD for the web application.
