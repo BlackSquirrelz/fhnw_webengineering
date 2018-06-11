@@ -8,6 +8,7 @@
 
 /**
  * Adapted for the use in the Timecatcher Project
+ * Project Team: Tobias W., Roger K, Fabian W
  */
 require_once("config/Autoloader.php");
 
