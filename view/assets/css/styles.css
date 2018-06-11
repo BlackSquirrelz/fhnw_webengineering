@@ -83,6 +83,17 @@ body p2 {
   color: red;
 }
 
+.form-control {
+  padding-left: 10px;
+}
+
+.form-group {
+  padding-left: 10px;
+}
+
+.input-group-addon {
+  padding-right: 20px;
+}
 
 #login-div {
   position:relative;
