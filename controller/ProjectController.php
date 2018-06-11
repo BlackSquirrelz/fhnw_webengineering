@@ -17,7 +17,7 @@ use view\LayoutRendering;
 class ProjectController
 {
     public static function create(){
-        $contentView = new TemplateView("projectCreate.php");
+        $contentView = new TemplateView("projectEdit.php");
         LayoutRendering::basicLayout($contentView);
     }
     public static function readAll(){

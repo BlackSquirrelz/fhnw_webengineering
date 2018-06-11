@@ -28,9 +28,6 @@ class ProjectDAO extends BasicDAO {
         $stmt->bindValue(':p_name', $project->getName());
         $stmt->bindValue(':p_desc', $project->getDesc());
         $stmt->bindValue(':p_start', $project->getStartDate());
-        $stmt->bindValue(':p_end', $project->getEndDate());
-        $stmt->bindValue(':p_admin', $project->getUserId());
-        $stmt->bindValue(':p_owner', $project->getUserId());
         $stmt->execute();
         return $this->read($this->pdoInstance->lastInsertId());
     }
