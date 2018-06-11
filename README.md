@@ -67,47 +67,53 @@ week, month, and overall.
 
 #### Functionalities: Brief Description
 ##### _Register_
-SOME TEXT TO ADD HERE
+Enter your information to create a user account that is stored in the database
 <br>
 <br>
 
 ##### _Login_
-SOME TEXT TO ADD HERE
+Log in the page if you have a create your account - forgot your password? No worries, press the link
+below and reset your password with a link sent via email (attention: email only works when connected
+to a remote server)
 <br>
 <br>
 
 ##### _Project Overview_
-SOME TEXT TO ADD HERE
+View all projects that you have created on one page with the properties inclusive. In addition
+you can modify them or view them as a pdf.
 <br>
 <br>
 
 ##### _Create Project_
-SOME TEXT TO ADD HERE
+You are able to create your own project by setting the properties. Set a project owner, a project
+name, a project description, the names of the employees working on the project, a starting date, and
+the planned time (numbers in weeks) to spend on the project.
 <br>
 <br>
 
 ##### _Profile_
-SOME TEXT TO ADD HERE
+Just update or delete your account as you wish.
 <br>
 <br>
 
 ##### _Modify Project_
-SOME TEXT TO ADD HERE
+If you want to change some properties in your project - do with the project modification function.
 <br>
 <br>
 
 ##### _Email_
-SOME TEXT TO ADD HERE
+Send the list of the projects to yourself via email.
 <br>
 <br>
 
 ##### _PDF_
-SOME TEXT TO ADD HERE
+Open a pdf window to list all the projects in a single pdf.
 <br>
 <br>
 
 ## Use Cases
-SOME TEXT TO ADD HERE
+The web application has the following five use case scenarios: Register/Login, Project Overview, 
+Create Project, Profile, Modify Project.
 <br>
 <br>
 
@@ -157,7 +163,7 @@ SOME TEXT TO ADD HERE
 <br>
 
 #### Entity Relationship Diagram (ERD)
-SOME TEXT TO ADD HERE
+See below the ERD for the web application.
 
 ![](modelling/erd/ERD-WE-TC.png)
 <br>
@@ -212,52 +218,58 @@ ADD CONSTRAINT FKuser_proje200153 FOREIGN KEY (projectID) REFERENCES project (ID
 <br>
 
 ## Implementation
-SOME TEXT TO ADD HERE
+After understanding and developing the fundamentals of the website the actual implementation can take
+place. Therefore, the wireframe diagrams provide a good first impression of the design and the code
+behind it can be checked in the folders above. Finally, the link to the Heroku deployment leads to
+the final product of this project work.
 <br>
 <br>
 
 #### Wireframe Diagrams
-SOME TEXT TO ADD HERE
+This section contains a few wireframe diagrams that demonstrate how the user interface looks (rough
+estimation) and how they are connected to one antoher; in other words, what page is connected to
+the another one. Note: Only pages that have valuable functions have been drawn into diagrams.
 <br>
 <br>
 
 ##### _Initial Page_
 ![](modelling/wireframe/Login-Page.png)
 <br>
-SOME TEXT TO ADD HERE
+From this page, if you log in, you get to the project overview page - if you will have to register
+you may get to the sign up page.
 <br>
 <br>
 
 ##### _Project Overview Page_
-![](modelling/wireframe/Login-Page.png)
+![](modelling/wireframe/)
 <br>
 SOME TEXT TO ADD HERE
 <br>
 <br>
 
 ##### _Sign Up Page_
-![](modelling/wireframe/Login-Page.png)
+![](modelling/wireframe/)
 <br>
 SOME TEXT TO ADD HERE
 <br>
 <br>
 
 ##### _Create Project Page_
-![](modelling/wireframe/Login-Page.png)
+![](modelling/wireframe/)
 <br>
 SOME TEXT TO ADD HERE
 <br>
 <br>
 
 ##### _Profile Page_
-![](modelling/wireframe/Login-Page.png)
+![](modelling/wireframe/)
 <br>
 SOME TEXT TO ADD HERE
 <br>
 <br>
 
 ##### _Modify Project Page_
-![](modelling/wireframe/Login-Page.png)
+![](modelling/wireframe/)
 <br>
 SOME TEXT TO ADD HERE
 <br>
