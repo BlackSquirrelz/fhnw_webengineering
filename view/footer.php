@@ -9,7 +9,7 @@ $user = AuthServiceImpl::getInstance()->readUser();
 
 <div class="footer-basic">
     <footer>
-        <p class="copyright">Welcome to Timecatcher. Your are Loggin in as: <?php echo $user->getUserName()?></p>
+        <p class="copyright">Welcome to Timecatcher. Your are Logged in as: <?php echo $user->getUserName()?></p>
     </footer>
 </div>
 </body>
