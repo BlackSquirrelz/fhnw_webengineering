@@ -134,7 +134,7 @@ Router::route_auth("POST", "/profile/update", $authFunction, function () {
 });
 
 Router::route_auth("POST", "/project/create", $authFunction, function () {
-    var_dump('Project Create goes here.... (update) then:')
+    var_dump('Project Create goes here.... (update) then:');
     if(ProjectController::update())
         Router::redirect("/allprojects");
 });
